@@ -100,11 +100,31 @@ html, body {
 h1 {
 	font-size: 80px;
 	font-weight: normal;
-	font-stretch: normal;
-	font-style: normal;
 	line-height: 0.9;
 	letter-spacing: 0.2px;
 	color: #26252c;
+}
+
+h2 {
+	font-size: 66px;
+	font-weight: normal;
+	line-height: 0.85;
+	letter-spacing: normal;
+	color: #26252c;
+	position: relative;
+	margin-bottom: 54px	;
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -54px;
+		left: 0;
+		width: 170px;
+		height: 8px;
+		object-fit: contain;
+		background-color: #1b1f26;
+	}
 }
 
 input {
@@ -121,8 +141,6 @@ input {
 	padding-right: 20px;
 	font-size: 18px;
 	font-weight: normal;
-	font-stretch: normal;
-	font-style: normal;
 	line-height: 2.11;
 	letter-spacing: normal;
 	color: #26252c;
