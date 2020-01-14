@@ -22,7 +22,7 @@ html, body {
 	padding-right: 15px;
 	box-sizing: content-box;
 
-	@media(max-width: 1310px) {
+	@media(max-width: 1340px) {
 		width: 100%;
 		box-sizing: border-box;
 	}
@@ -31,9 +31,20 @@ html, body {
 .container-max {
 	width: 1440px;
 	margin: 0 auto;
-	padding-left: 15px;
-	padding-right: 15px;
+	//padding-left: 15px;
+	//padding-right: 15px;
 	box-sizing: content-box;
+
+	@media(max-width: 1460px) {
+		width: 100%;
+	}
+
+	@media(max-width: 1439px) {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+		box-sizing: border-box;
+	}
 }
 
 
@@ -42,6 +53,7 @@ html, body {
 	outline: none;
 	display: inline-block;
 	padding: 17px 61px;
+	white-space: nowrap;
 
 	border-radius: 5px;
 	box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.19);
@@ -52,12 +64,17 @@ html, body {
 	font-weight: bold;
 	font-stretch: normal;
 	font-style: normal;
-	letter-spacing: -0.3px;
+	letter-spacing: -1px;
 	text-align: center;
 	transition: .2s;
 	cursor: pointer;
 	box-sizing: border-box;
 	border: solid 4px #33558b;
+
+	@media(max-width: 1180px) {
+		padding: 14px 55px;
+		font-size: 16px;
+	}
 
 	&:hover {
 		box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.19);
@@ -86,7 +103,7 @@ h1 {
 	font-stretch: normal;
 	font-style: normal;
 	line-height: 0.9;
-	letter-spacing: normal;
+	letter-spacing: 0.2px;
 	color: #26252c;
 }
 
@@ -109,4 +126,10 @@ input {
 	line-height: 2.11;
 	letter-spacing: normal;
 	color: #26252c;
+
+	@media(max-width: 1180px) {
+		width: 240px;
+		height: 54px;
+	}
 }
+
