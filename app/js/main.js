@@ -34,5 +34,11 @@ if($(".brands-slider").length) {
 $(".js__tab-ourall").click(function() {
 	var index = $(this).index();
 	$(this).addClass("active").siblings().removeClass("active");
-	$(".bourall__items").eq(index).show().siblings().hide();
+	$(".bourall__items").eq(index).fadeIn(500).siblings().hide();
+});
+
+$(".js__stylwork-tab").click(function() {
+	var index = $(this).index();
+	$(this).addClass("active").siblings().removeClass("active");
+	$(".stylistwork__pic").eq(index).fadeIn(500).siblings().hide();
 });
