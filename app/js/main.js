@@ -19,3 +19,12 @@ $('#phone').mask("+7 999 999 99 99", {
 	autoclear: true
 });
 
+if($(".brands-slider").length) {
+	$(".brands-slider").slick({
+		arrows: false,
+		dots: true,
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 1
+	});
+}

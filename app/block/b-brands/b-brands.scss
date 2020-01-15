@@ -1,0 +1,26 @@
+.brands {
+	margin-top: 198px;
+
+	&__wrap {
+		h2 {
+			margin-bottom: 154px;
+		}
+	}
+}
+
+.brands-slider {
+	&__item {
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+		height: 104px;
+
+		img {
+			margin: auto;
+		}
+	}
+
+	.slick-dots {
+		margin-top: 68px;
+	}
+}
