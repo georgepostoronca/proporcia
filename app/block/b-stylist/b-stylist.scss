@@ -1,7 +1,15 @@
 .bstylist {
+	margin-top: 158px;
 
 	&__wrap {
 		padding-right: 100px;
+		position: relative;
+
+		h2 {
+			position: absolute;
+			left: calc(470px + 11%);
+			top: 58px;
+		}
 	}
 
 	&__grid {
