@@ -28,3 +28,11 @@ if($(".brands-slider").length) {
 		slidesToScroll: 1
 	});
 }
+
+
+// Tab
+$(".js__tab-ourall").click(function() {
+	var index = $(this).index();
+	$(this).addClass("active").siblings().removeClass("active");
+	$(".bourall__items").eq(index).show().siblings().hide();
+});
