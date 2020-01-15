@@ -31,6 +31,24 @@ if($(".brands-slider").length) {
 	});
 }
 
+if($(".teamslider").length) {
+	var teamslider =  $(".teamslider").slick({
+		infinite: true,
+		adaptiveHeight: true,
+		arrows: false,
+	});
+
+	$(".teamslider__prev").click(function() {
+		$(".teamslider").slick("slickPrev");
+	});
+
+	$(".teamslider__next").click(function() {
+		$(".teamslider").slick("slickNext");
+	});
+}
+
+
+
 
 // Tab
 $(".js__tab-ourall").click(function() {
