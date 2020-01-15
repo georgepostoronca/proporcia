@@ -15,9 +15,11 @@
 svg4everybody();
 
 // Phone Mask
-$('#phone').mask("+7 999 999 99 99", {
-	autoclear: true
-});
+$('.phone').each(function() {
+	$(this).mask("+7 999 999 99 99", {
+		autoclear: true
+	});
+})
 
 if($(".brands-slider").length) {
 	$(".brands-slider").slick({

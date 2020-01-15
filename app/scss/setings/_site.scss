@@ -132,6 +132,14 @@ h2 {
 	}
 }
 
+h3 {
+	font-size: 46px;
+	font-weight: bold;
+	line-height: 1.04;
+	letter-spacing: normal;
+	color: #ffffff;
+}
+
 input {
 	width: 270px;
 	height: 64px;
@@ -140,7 +148,7 @@ input {
 	box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.19);
 	border: solid 2px #393a45;
 	outline: none;
-	background-color: #f1f1f2;
+	background-color: transparent;
 
 	padding-left: 32px;
 	padding-right: 20px;
@@ -149,6 +157,10 @@ input {
 	line-height: 2.11;
 	letter-spacing: normal;
 	color: #26252c;
+
+	&.color-white {
+		color: #fff;
+	}
 
 	@media(max-width: 1180px) {
 		width: 240px;
