@@ -85,7 +85,6 @@ if($(".studyslide").length) {
 				}
 			}
 		]
-
 	});
 }
 
@@ -135,7 +134,80 @@ if($(".repslider").length) {
 	// });
 }
 
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
 
+
+if($(".stylistwork__tab").length) {
+	var repsliderSetings = {
+		arrows: false,
+		dots: true,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 2
+				}
+			}, {
+				breakpoint: 680,
+				settings: {
+					dots: true,
+					slidesToShow: 2
+				}
+			},{
+				breakpoint: 580,
+				settings: {
+					slidesToShow: 1,
+				}
+			}, {
+				breakpoint: 400,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	}
+
+	if( $(window).width() < 767 &&  !$(".stylistwork__tab").hasClass('slick-initialized')) {
+		$(".stylistwork__tab").slick(repsliderSetings);
+		console.log("init");
+	}
+
+	$(window).on('resize', function() {
+		// if( $(window).width() < 767 &&  !$(".stylistwork__tab").hasClass('slick-initialized')) {
+		// 	$(".stylistwork__tab").slick(repsliderSetings);
+		// } else {
+		// 	$(".stylistwork__tab").slick("unslick");
+		// }
+	});
+
+	var myEfficientFn = debounce(function() {
+		if( $(window).width() < 767 ) {
+			$(".stylistwork__tab").slick(repsliderSetings);
+			console.log("slick")
+		} else {
+			console.log("Unslick")
+			$(".stylistwork__tab").slick("unslick");
+		}
+	}, 250);
+
+	window.addEventListener('resize', myEfficientFn);
+}
 
 
 // Tab

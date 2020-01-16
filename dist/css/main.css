@@ -2086,23 +2086,12 @@ input.color-white {
     cursor: pointer;
     padding-top: 16px;
     margin-bottom: 37px;
+    outline: none;
 }
 
 .stylistwork__item:last-child p {
     border-bottom: 0;
     padding-bottom: 0;
-}
-
-.stylistwork__item.active:before, .stylistwork__item:hover:before {
-    background-color: #33558b;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    opacity: 1;
-    -webkit-box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, .19);
-    box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, .19);
-}
-
-.stylistwork__item.active b, .stylistwork__item:hover b {
-    color: #393a45;
 }
 
 .stylistwork__item:before {
@@ -2143,6 +2132,14 @@ input.color-white {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.stylistwork__item i {
+    display: block;
+}
+
+.stylistwork__item i img {
+    max-width: 100%;
 }
 
 .stylistwork__item b {
@@ -2188,13 +2185,18 @@ input.color-white {
     object-position: top;
     position: relative;
     top: -37px;
-    -webkit-box-shadow: 5px 4px 55px 0 rgba(0, 0, 0, .27);
-    box-shadow: 5px 4px 55px 0 rgba(0, 0, 0, .27);
     display: none;
 }
 
 .stylistwork__pic.active {
     display: block;
+}
+
+.stylistwork__pic img {
+    max-width: 100%;
+    width: 100%;
+    -webkit-box-shadow: 5px 4px 55px 0 rgba(0, 0, 0, .27);
+    box-shadow: 5px 4px 55px 0 rgba(0, 0, 0, .27);
 }
 
 .stylstudy {
@@ -2979,6 +2981,18 @@ input.color-white {
         padding-right: 40px;
     }
 
+    .stylistwork__tab {
+        width: 435px;
+    }
+
+    .stylistwork__images {
+        padding-left: 40px;
+    }
+
+    .stylistwork__pic {
+        top: 0;
+    }
+
     .teacher__img {
         width: 150px;
         height: 150px;
@@ -3047,6 +3061,7 @@ input.color-white {
     .reghaircut {
         padding-top: 50px;
         padding-bottom: 50px;
+        margin-top: 100px;
     }
 
     .reghaircut__img {
@@ -3106,6 +3121,36 @@ input.color-white {
 
     .repslider__item {
         width: 170px;
+    }
+
+    .stylistwork__wrap h2, .stylistwork__wrap .bourall__title span, .bourall__title .stylistwork__wrap span {
+        margin-bottom: 100px;
+    }
+
+    .stylistwork__tab {
+        width: 350px;
+    }
+
+    .stylistwork__item {
+        padding-left: 60px;
+        margin-bottom: 20px;
+        padding-top: 10px;
+    }
+
+    .stylistwork__item:before {
+        width: 50px;
+        height: 50px;
+        padding-top: 2px;
+    }
+
+    .stylistwork__item b {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .stylistwork__item p {
+        padding-bottom: 10px;
+        border-width: 2px;
     }
 
     .stylstudy__wrap h2, .stylstudy__wrap .bourall__title span, .bourall__title .stylstudy__wrap span {
@@ -3222,6 +3267,18 @@ input.color-white {
     }
 }
 
+@media (max-width: 767px) and (max-width: 580px) {
+    .stylistwork__tab .slick-list {
+        padding: 0 15% 0 0;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 400px) {
+    .stylistwork__tab .slick-list {
+        padding: 0 15% 0 0;
+    }
+}
+
 @media (max-width: 767px) {
   
     h2,
@@ -3241,6 +3298,10 @@ input.color-white {
         line-height: 1;
     }
 
+    .reghaircut {
+        margin-top: 0;
+    }
+
     .registration__title h3 {
         font-size: 25px;
         line-height: 1;
@@ -3252,6 +3313,74 @@ input.color-white {
 
     .registration__form-input {
         width: 100%;
+    }
+
+    .stylistwork {
+        margin-bottom: 20px;
+        margin-top: 100px;
+    }
+
+    .stylistwork__wrap h2, .stylistwork__wrap .bourall__title span, .bourall__title .stylistwork__wrap span {
+        margin-bottom: 43px;
+    }
+
+    .stylistwork__tab {
+        width: -webkit-calc(100% + 44px);
+        width: calc(100% + 44px);
+        margin-left: -22px;
+        padding-left: 22px;
+    }
+
+    .stylistwork__tab .slick-dots {
+        display: none !important;
+    }
+
+    .stylistwork__tab .slick-slide {
+        margin-left: 20px;
+    }
+
+    .stylistwork__tab .slick-list {
+        margin-left: -20px;
+    }
+
+    .stylistwork__item {
+        padding-left: 0;
+    }
+
+    .stylistwork__item:before {
+        display: none;
+    }
+
+    .stylistwork__item i {
+        height: 354px;
+        overflow: hidden;
+        margin-bottom: 41px;
+    }
+
+    .stylistwork__item i img {
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center center;
+        object-position: center center;
+        height: 100%;
+    }
+
+    .stylistwork__item b {
+        color: #26252c;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        opacity: 1;
+    }
+
+    .stylistwork__item p {
+        border-bottom: 0;
+        color: #26252c;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        opacity: 1;
+    }
+
+    .stylistwork__images {
+        display: none;
     }
 
     .stylstudy__wrap {
@@ -3599,6 +3728,31 @@ input.color-white {
         height: 252px;
     }
 
+    .stylistwork {
+        margin-top: 50px;
+    }
+
+    .stylistwork__item i {
+        margin-bottom: 41px;
+    }
+
+    .stylistwork__item b {
+        font-size: 20px;
+        line-height: 1;
+        margin-bottom: 15px;
+        color: #26252c;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        opacity: 1;
+    }
+
+    .stylistwork__item p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #26252c;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        opacity: 1;
+    }
+
     .stylstudy {
         margin-top: 70px;
     }
@@ -3825,6 +3979,10 @@ input.color-white {
         padding: 0 40% 0 0;
     }
 
+    .stylistwork__item i {
+        height: 252px;
+    }
+
     .studyslide .slick-list {
         padding: 0 20% 0 0;
     }
@@ -3888,6 +4046,24 @@ input.color-white {
         color: #33558b;
         position: relative;
         top: -4px;
+    }
+}
+
+@media (min-width: 768px) {
+    .stylistwork__item.active:before, .stylistwork__item:hover:before {
+        background-color: #33558b;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        opacity: 1;
+        -webkit-box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, .19);
+        box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, .19);
+    }
+
+    .stylistwork__item.active b, .stylistwork__item:hover b {
+        color: #393a45;
+    }
+
+    .stylistwork__item i {
+        display: none;
     }
 }
 
