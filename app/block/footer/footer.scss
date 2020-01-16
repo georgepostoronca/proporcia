@@ -118,6 +118,14 @@
 		color: rgba(#ffffff, 0.79);
 	}
 
+	a {
+		transition: .2s;
+
+		&:hover {
+			opacity: .5
+		}
+	}
+
 	img {
 
 	}

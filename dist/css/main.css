@@ -2624,6 +2624,17 @@ input.color-white::placeholder {
     color: rgba(255, 255, 255, .79);
 }
 
+.copyright a {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.copyright a:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    opacity: .5;
+}
+
 .header__wrap {
     padding-left: 134px;
     display: -ms-flexbox;
