@@ -59,6 +59,17 @@ if($(".studyslide").length) {
 	});
 }
 
+if($(".repslider").length) {
+	$(".repslider").slick({
+		arrows: false,
+		dots: true,
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		// adaptiveHeight: true,
+	});
+}
+
 
 
 
