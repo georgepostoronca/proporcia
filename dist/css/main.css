@@ -1348,6 +1348,7 @@ input.color-white::placeholder {
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s;
+    cursor: pointer;
 }
 
 .slick-dots li.slick-active {

@@ -1,0 +1,113 @@
+.reputation {
+	margin-top: 153px;
+
+	&__wrap {
+		h2 {
+			margin-bottom: 158px;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: flex-end;
+		z-index: 10;
+		position: relative;
+
+		.btn {
+			@media(min-width: 993px) {
+				background-color: transparent;
+				display: flex;
+				align-items: center;
+				border: 0;
+				box-shadow: none;
+				padding: 0;
+				width: 310px;
+				padding-left: 38px;
+				margin-top: -22px;
+
+				&:hover {
+					svg, span {
+						fill: $blue;
+						color: $blue;
+					}
+				}
+
+				svg {
+					width: 49px;
+					height: 38px;
+					fill: rgba(#000, 0.75);
+					margin-right: 20px;
+					transition: .2s;
+				}
+
+				span {
+					transition: .2s;
+					font-size: 22px;
+					font-weight: bold;
+					letter-spacing: normal;
+					color: #33558b;
+					position: relative;
+					top: -4px;
+				}
+			}
+		}
+	}
+}
+
+.repslider {
+	margin-top: 105px;
+	//margin-bottom: 155px;
+
+	.slick-slide {
+		margin-left: 30px;
+	}
+
+	.slick-list {
+		margin-left: -30px;
+	}
+
+	.slick-dots {
+		margin-top: 93px;
+		width: calc(100% - 310px);
+	}
+
+	&__item {
+
+		i {
+			height: 340px;
+			display: block;
+			overflow: hidden;
+			margin-bottom: 26px;
+		}
+
+		img {
+			max-width: 100%;
+			width: 100%;
+			display: block;
+
+			@supports (object-fit: cover) {
+				height: 100%;
+				object-fit: cover;
+				object-position: center center;
+			}
+		}
+
+		b {
+			font-size: 22px;
+			font-weight: normal;
+			line-height: 1.1;
+			letter-spacing: normal;
+			color: #1b1f26;
+			display: block;
+		}
+
+		span {
+			font-size: 14px;
+			font-weight: normal;
+			line-height: 1.57;
+			letter-spacing: normal;
+			color: #292b34;
+			display: block;
+		}
+	}
+}
