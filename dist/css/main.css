@@ -2205,10 +2205,15 @@ input.color-white {
 }
 
 .stylstudy__head {
+    width: 100%;
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
     margin-bottom: 105px;
 }
 
@@ -2252,6 +2257,8 @@ input.color-white {
     flex-wrap: wrap;
     width: 48.6%;
     padding-right: 10px;
+    position: relative;
+    z-index: 2;
 }
 
 .teacher__item > p {
@@ -2323,7 +2330,7 @@ input.color-white {
     margin-bottom: 155px;
 }
 
-.studyslide .slick-slide img {
+.studyslide .slick-slide {
     margin-left: 30px;
 }
 
@@ -2340,6 +2347,12 @@ input.color-white {
     height: 264px;
 }
 
+.studyslide__item i {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 .studyslide__item img {
     max-width: 100%;
     width: 100%;
@@ -2353,6 +2366,10 @@ input.color-white {
         -o-object-position: center center;
         object-position: center center;
     }
+}
+
+.studyslide__item p {
+    display: none;
 }
 
 .teamstyl__wrap {
@@ -2961,6 +2978,15 @@ input.color-white {
         padding-right: 40px;
     }
 
+    .teacher__img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .teacher__info {
+        padding-left: 20px;
+    }
+
     .teamslider__img {
         width: 50%;
     }
@@ -2979,6 +3005,10 @@ input.color-white {
 }
 
 @media (max-width: 1080px) {
+    .stylstudy {
+        margin-top: 100px;
+    }
+
     .teamstyl__wrap {
         padding-top: 100px;
         padding-right: 0;
@@ -3061,6 +3091,54 @@ input.color-white {
 
     .repslider__item {
         width: 170px;
+    }
+
+    .stylstudy__wrap h2, .stylstudy__wrap .bourall__title span, .bourall__title .stylstudy__wrap span {
+        margin-bottom: 60px;
+    }
+
+    .stylstudy__wrap {
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .stylstudy__head {
+        margin-bottom: 50px;
+    }
+
+    .stylstudy__head img {
+        width: 220px;
+    }
+
+    .stylstudy__head p {
+        width: 90%;
+    }
+
+    .teacher__item {
+        display: block;
+    }
+
+    .teacher__item > p {
+        margin-top: 20px;
+    }
+
+    .teacher__info {
+        padding-left: 0;
+        width: 100%;
+        -ms-flex: auto;
+        -webkit-box-flex: 1;
+        -webkit-flex: auto;
+        flex: auto;
+    }
+
+    .studyslide {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .studyslide .slick-dots {
+        margin-top: 30px;
     }
 
     .teamstyl__grid {
@@ -3161,6 +3239,47 @@ input.color-white {
         width: 100%;
     }
 
+    .stylstudy__wrap {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    .stylstudy__head {
+        -ms-flex-order: 1;
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        order: 1;
+        margin-bottom: 44px;
+    }
+
+    .teacher-scroll {
+        -ms-flex-order: 3;
+        -webkit-box-ordinal-group: 4;
+        -webkit-order: 3;
+        order: 3;
+    }
+
+    .teacher {
+        width: 100%;
+        -ms-flex-align: start;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        margin-bottom: 60px;
+    }
+
+    .studyslide {
+        -ms-flex-order: 2;
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        order: 2;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
     .teamslider__info {
         padding-left: 20px;
     }
@@ -3211,6 +3330,107 @@ input.color-white {
 
     .repslider .slick-dots {
         display: none !important;
+    }
+
+    .stylstudy__wrap {
+        -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .stylstudy__head h2, .stylstudy__head .bourall__title span, .bourall__title .stylstudy__head span {
+        margin-bottom: 20px;
+    }
+
+    .teacher {
+        width: 700px;
+    }
+
+    .teacher-scroll {
+        overflow: auto;
+        width: -webkit-calc(100% + 44px);
+        width: calc(100% + 44px);
+        margin-left: -22px;
+        padding-left: 22px;
+    }
+
+    .teacher {
+        position: relative;
+        margin-top: 111px;
+    }
+
+    .teacher:after {
+        content: "";
+        width: -webkit-calc(100% + 44px);
+        width: calc(100% + 44px);
+        margin-left: -22px;
+        height: 100%;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .teacher__item > p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 10px;
+        margin-bottom: 44px;
+    }
+
+    .teacher__img {
+        width: 180px;
+        height: 180px;
+        margin-top: -96px;
+    }
+
+    .teacher__info {
+        padding-top: 32px;
+    }
+
+    .teacher__info b {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .teacher__info p {
+        display: none;
+    }
+
+    .studyslide {
+        width: -webkit-calc(100% + 22px);
+        width: calc(100% + 22px);
+    }
+
+    .studyslide .slick-dots {
+        display: none !important;
+    }
+
+    .studyslide__item {
+        height: auto;
+    }
+
+    .studyslide__item i {
+        height: 250px;
+        overflow: hidden;
+        margin-bottom: 32px;
+    }
+
+    .studyslide__item i img {
+        height: 100%;
+    }
+
+    .studyslide__item img {
+        -webkit-box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, .19);
+        box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, .19);
+    }
+
+    .studyslide__item p {
+        display: block;
     }
 
     .teamstyl__grid {
@@ -3328,6 +3548,32 @@ input.color-white {
 
     .repslider__item i {
         height: 252px;
+    }
+
+    .stylstudy {
+        margin-top: 70px;
+    }
+
+    .stylstudy__head img {
+        width: 105px;
+    }
+
+    .stylstudy__head p {
+        display: none;
+    }
+
+    .studyslide {
+        width: -webkit-calc(100% + 22px);
+        width: calc(100% + 22px);
+    }
+
+    .studyslide .slick-slide {
+        margin-left: 20px;
+    }
+
+    .studyslide .slick-list {
+        padding: 0 20% 0 0;
+        margin-left: -20px;
     }
 
     .teamstyl__wrap {
@@ -3510,11 +3756,28 @@ input.color-white {
     .reputation__btn .btn {
         width: 100%;
     }
+
+    .teacher {
+        width: 544px;
+    }
+
+    .teacher__item {
+        width: 258px;
+        margin-right: 10px;
+    }
+
+    .studyslide__item i {
+        height: 184px;
+    }
 }
 
 @media (max-width: 400px) {
     .repslider .slick-list {
         padding: 0 40% 0 0;
+    }
+
+    .studyslide .slick-list {
+        padding: 0 20% 0 0;
     }
 }
 

@@ -1727,6 +1727,36 @@ if($(".studyslide").length) {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		// adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2
+				}
+			}, {
+				breakpoint: 720,
+				settings: {
+					slidesToShow: 2
+				}
+			}, {
+				breakpoint: 680,
+				settings: {
+					dots: true,
+					slidesToShow: 2
+				}
+			},{
+				breakpoint: 580,
+				settings: {
+					slidesToShow: 1,
+				}
+			}, {
+				breakpoint: 400,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+
 	});
 }
 
@@ -1752,7 +1782,7 @@ if($(".repslider").length) {
 				breakpoint: 680,
 				settings: {
 					dots: true,
-					slidesToShow: 3
+					slidesToShow: 2
 				}
 			},{
 				breakpoint: 580,
