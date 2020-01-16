@@ -170,6 +170,10 @@ input {
 
 	&.color-white {
 		color: #fff;
+
+		&::placeholder {
+			color: #fff;
+		}
 	}
 
 	@media(max-width: 1180px) {
