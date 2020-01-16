@@ -85,6 +85,11 @@ html, body {
 		font-size: 16px;
 	}
 
+	@media(max-width: 580px) {
+		font-size: 14px;
+		padding: 16px 55px;
+	}
+
 	&:hover {
 		box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.19);
 		background-color: #3864a9;
@@ -175,6 +180,22 @@ h3 {
 	line-height: 1.04;
 	letter-spacing: normal;
 	color: #ffffff;
+
+	@media(max-width: 992px) {
+		font-size: 30px;
+		line-height: 1;
+	}
+
+	@media(max-width: 767px) {
+		font-size: 25px;
+		line-height: 1;
+	}
+
+	@media(max-width: 580px) {
+		font-size: 18px;
+		font-weight: normal;
+		line-height: 1;
+	}
 }
 
 p {
@@ -205,11 +226,16 @@ input {
 	letter-spacing: normal;
 	color: #26252c;
 
+	@media(max-width: 580px) {
+		padding-left: 25px;
+		font-size: 14px;
+	}
+
 	&.color-white {
 		color: #fff;
 
 		&::placeholder {
-			color: #fff;
+			//color: #fff;
 		}
 	}
 
