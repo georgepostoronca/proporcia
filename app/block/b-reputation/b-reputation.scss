@@ -2,9 +2,27 @@
 	margin-top: 153px;
 	margin-bottom: 207px;
 
+	@media(max-width: 992px) {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+
+	@media(max-width: 580px) {
+		margin-top: 56px;
+		margin-bottom: 72px;
+	}
+
 	&__wrap {
 		h2 {
 			margin-bottom: 158px;
+
+			@media(max-width: 992px) {
+				margin-bottom: 100px;
+			}
+
+			@media(max-width: 580px) {
+				margin-bottom: 56px;
+			}
 		}
 	}
 
@@ -14,8 +32,18 @@
 		z-index: 10;
 		position: relative;
 
+		@media(max-width: 680px) {
+			justify-content: center;
+			margin-top: 41px;
+		}
+
 		.btn {
-			@media(min-width: 993px) {
+
+			@media(max-width: 480px) {
+				width: 100%;
+			}
+
+			@media(min-width: 681px) {
 				background-color: transparent;
 				display: flex;
 				align-items: center;
@@ -26,6 +54,10 @@
 				padding-left: 38px;
 				margin-top: -22px;
 
+				@media(max-width: 992px) {
+					width: 252px !important;
+				}
+
 				&:hover {
 					svg, span {
 						fill: $blue;
@@ -34,6 +66,7 @@
 				}
 
 				svg {
+					display: block;
 					width: 49px;
 					height: 38px;
 					fill: rgba(#000, 0.75);
@@ -51,6 +84,10 @@
 					top: -4px;
 				}
 			}
+
+			svg {
+				display: none;
+			}
 		}
 	}
 }
@@ -59,26 +96,75 @@
 	margin-top: 105px;
 	//margin-bottom: 155px;
 
+	@media(max-width: 992px) {
+		margin-top: 80px;
+	}
+
+	@media(max-width: 580px) {
+		margin-top: 56px;
+		width: calc(100% + 22px);
+	}
+
+	//@media(max-width: 992px) {
+	//	width: 1024px;
+	//	display: flex;
+	//}
+	//
+	//&-scroll {
+	//	@media(max-width: 992px) {
+	//		overflow: auto;
+	//	}
+	//}
+
 	.slick-slide {
 		margin-left: 30px;
+
+		@media(max-width: 580px) {
+			margin-left: 4px;
+		}
 	}
 
 	.slick-list {
 		margin-left: -30px;
+
+		@media(max-width: 580px) {
+			padding: 0 20% 0 0;
+			margin-left: -4px;
+		}
+
+		@media(max-width: 400px) {
+			padding: 0 40% 0 0;
+		}
 	}
 
 	.slick-dots {
 		margin-top: 93px;
 		width: calc(100% - 310px);
+
+		@media(max-width: 992px) {
+			width: calc(100% - 251px);
+		}
+
+		@media(max-width: 680px) {
+			display: none !important;
+		}
 	}
 
 	&__item {
+
+		@media(max-width: 992px) {
+			width: 170px;
+		}
 
 		i {
 			height: 340px;
 			display: block;
 			overflow: hidden;
 			margin-bottom: 26px;
+
+			@media(max-width: 580px) {
+				height: 252px;
+			}
 		}
 
 		img {
