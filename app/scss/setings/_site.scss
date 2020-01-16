@@ -14,8 +14,10 @@ html, body {
 	padding-right: 15px;
 	box-sizing: content-box;
 
-	@media(max-width: 1200px) {
+	@media(max-width: 1220px) {
 		width: 100%;
+		padding-left: 22px;
+		padding-right: 22px;
 		box-sizing: border-box;
 	}
 }
@@ -29,6 +31,8 @@ html, body {
 
 	@media(max-width: 1340px) {
 		width: 100%;
+		padding-left: 22px;
+		padding-right: 22px;
 		box-sizing: border-box;
 	}
 }
@@ -46,8 +50,8 @@ html, body {
 
 	@media(max-width: 1439px) {
 		width: 100%;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 22px;
+		padding-right: 22px;
 		box-sizing: border-box;
 	}
 }
@@ -117,7 +121,23 @@ h2 {
 	letter-spacing: normal;
 	color: #26252c;
 	position: relative;
-	margin-bottom: 54px	;
+	margin-bottom: 54px;
+
+	@media(max-width: 992px) {
+		font-size: 50px;
+		line-height: 0.95;
+	}
+
+	@media(max-width: 767px) {
+		font-size: 35px;
+		line-height: 1;
+	}
+
+	@media(max-width: 580px) {
+		font-size: 24px;
+		font-weight: normal;
+		line-height: 1;
+	}
 
 	&:after {
 		content: "";
@@ -129,6 +149,23 @@ h2 {
 		height: 8px;
 		object-fit: contain;
 		background-color: #1b1f26;
+
+		@media(max-width: 992px) {
+			width: 120px;
+			height: 6px;
+			bottom: -30px;
+		}
+
+		@media(max-width: 767px) {
+			width: 80px;
+			height: 4px;
+			bottom: -20px;
+		}
+
+		@media(max-width: 580px) {
+			width: 39px;
+			height: 4px;
+		}
 	}
 }
 
@@ -220,4 +257,9 @@ input {
 	&-slide {
 		outline: none;
 	}
+}
+
+
+.safari-scroll {
+	-webkit-overflow-scrolling: touch;
 }
