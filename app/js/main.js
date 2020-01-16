@@ -48,6 +48,18 @@ if($(".teamslider").length) {
 }
 
 
+if($(".studyslide").length) {
+	$(".studyslide").slick({
+		arrows: false,
+		dots: true,
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		// adaptiveHeight: true,
+	});
+}
+
+
 
 
 // Tab

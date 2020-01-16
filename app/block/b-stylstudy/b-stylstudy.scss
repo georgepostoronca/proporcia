@@ -1,0 +1,135 @@
+.stylstudy {
+	margin-top: 254px;
+
+	&__wrap {
+		h2 {
+			margin-bottom: 105px;
+		}
+	}
+
+	&__head {
+		display: flex;
+		margin-bottom: 105px;
+
+		> div {
+			&:first-child {
+				padding-right: 20px;
+			}
+		}
+
+		img {
+			width: 338px;
+		}
+
+		p {
+			opacity: 0.77;
+			font-size: 20px;
+			font-weight: normal;
+			line-height: 1.6;
+			letter-spacing: normal;
+			color: #1b1f26;
+			width: 64%;
+		}
+	}
+}
+
+
+.teacher {
+	display: flex;
+	justify-content: space-between;
+
+	&__item {
+		display: flex;
+		flex-wrap: wrap;
+		width: 48.6%;
+		padding-right: 10px;
+
+		> p {
+			width: 100%;
+			opacity: 0.77;
+			font-size: 18px;
+			font-weight: normal;
+			line-height: 1.78;
+			letter-spacing: normal;
+			color: #1b1f26;
+			margin-top: 46px;
+		}
+	}
+
+	&__img {
+		width: 201px;
+		height: 201px;
+		object-fit: contain;
+		box-shadow: -1px 3px 24px 0 rgba(0, 0, 0, 0.23);
+		border-radius: 100%;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+
+			@supports (object-fit: contain) {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&__info {
+		flex: 1;
+		padding-left: 70px;
+		padding-top: 28px;
+
+		b {
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 1.5;
+			letter-spacing: normal;
+			color: #1b1f26;
+
+			display: inline-block;
+			margin-bottom: 12px;
+		}
+
+		p {
+			font-size: 16px;
+			font-weight: normal;
+			line-height: 1.5;
+			letter-spacing: normal;
+			color: rgba(#1b1f26, 0.48);
+		}
+	}
+}
+
+
+.studyslide {
+	margin-top: 105px;
+	margin-bottom: 155px;
+
+	.slick-slide img {
+		margin-left: 30px;
+	}
+
+	.slick-list {
+		margin-left: -30px;
+	}
+
+	.slick-dots {
+		margin-top: 116px;
+	}
+
+	&__item {
+		overflow: hidden;
+		height: 264px;
+
+		img {
+			max-width: 100%;
+			width: 100%;
+
+			@supports (object-fit: cover) {
+				height: 100%;
+				object-fit: cover;
+				object-position: center center;
+			}
+		}
+	}
+}
