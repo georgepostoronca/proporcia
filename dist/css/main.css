@@ -1668,6 +1668,7 @@ input.color-white {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
+    padding-right: 10px;
 }
 
 .reghaircut__form h3 {
@@ -3043,6 +3044,20 @@ input.color-white {
         line-height: 1;
     }
 
+    .reghaircut {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .reghaircut__img {
+        width: 50%;
+    }
+
+    .reghaircut__img img {
+        width: -webkit-calc(50% - 10px);
+        width: calc(50% - 10px);
+    }
+
     .registration {
         width: -webkit-calc(100% + 44px);
         width: calc(100% + 44px);
@@ -3499,6 +3514,40 @@ input.color-white {
     input {
         padding-left: 25px;
         font-size: 14px;
+    }
+
+    .reghaircut {
+        padding-bottom: 42px;
+    }
+
+    .reghaircut__form {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .reghaircut__form > span {
+        display: none;
+    }
+
+    .reghaircut__form form {
+        width: 100%;
+    }
+
+    .reghaircut__img {
+        display: none;
+    }
+
+    .reghaircut form input {
+        width: 100%;
+        margin-bottom: 13px;
+    }
+
+    .reghaircut .header__btn-group {
+        width: 100%;
+    }
+
+    .reghaircut .header__btn-group .btn {
+        width: 100%;
     }
 
     .registration__wrap {
