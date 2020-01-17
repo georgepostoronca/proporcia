@@ -10,22 +10,24 @@
     <link rel="shortcut icon" href="favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-    <link rel="stylesheet" href="css/main.css?v=1579206603536">
+    <link rel="stylesheet" href="css/main.css?v=1579235086694">
 </head>
 
 <body>
     <div id="wrapper">
-        <div class="menu">
+        <div class="menu js__menu">
             <div class="container-second">
                 <div class="menu__wrap">
                     <a href="/" class="menu__logo">
                         <img src="ico/logo.png" srcset="ico/logo@2x.png 2x, ico/logo@3x.png 3x">
                     </a>
-                    <nav class="menu__nav"><a href="#Услуги">Услуги</a>  <a href="#Портфолио">Портфолио</a>  <a href="#Прайс">Прайс</a>  <a href="#О-студии">О студии</a>  <a href="#Контакты">Контакты</a>
+                    <nav class="menu__nav js__menu-nav"><a href="#Услуги">Услуги</a>  <a href="#Портфолио">Портфолио</a>  <a href="#Прайс">Прайс</a>  <a href="#О-студии">О студии</a>  <a href="#Контакты">Контакты</a>  <a href="#Записаться-on-line" class="menu__nav-reg">Записаться on-line</a>
                     </nav>
                     <div class="menu__phone"><a href="tel:+7(921)343-07-43">+7 (921) 343-07-43</a>
                     </div>
                     <div class="menu__regonline"><a href="#Записаться-on-line">Записаться on-line</a>
+                    </div>
+                    <div class="menu__btn js__toggle-menu"><span></span>
                     </div>
                 </div>
             </div>
@@ -34,6 +36,8 @@
             <div class="container-max">
                 <div class="header__wrap">
                     <div class="header__info">
+                        <div class="header__regonline"><a href="#Записаться-on-line">Записаться on-line</a>
+                        </div>
                         <h1>PROпорция —<br>это студия<br>красоты</h1>
                         <form action="">
                             <input type="text" class="phone" placeholder="+7 999 999 99 99">
@@ -106,7 +110,9 @@
                         <div class="bstylist__item bstylist__item--discount"><b>-15%</b>
                             <p>Запишитесь к стилисту прямо сейчас и получите скидку 15% на окрашивание</p><em>акция действует до 25.12</em>  <a href="#" class="btn"><span>Записаться</span></a>
                         </div>
-                        <div class="loadmore">
+                    </div>
+                    <div class="loadmore">
+                        <div class="loadmore__wrap">
                             <div class="loadmore__grid">
                                 <div class="loadmore__item">
                                     <img src="img/bitmap-copy-10.jpg" srcset="img/bitmap-copy-10@2x.jpg 2x, img/bitmap-copy-10@3x.jpg 3x">
@@ -131,28 +137,19 @@
                     <h2>Работаем<br>с ведущими брэндами</h2>
                     <div class="brands-slider">
                         <div class="brands-slider__item">
-                            <img src="img/brand-1.jpg" srcset="img/brand-1@2x.jpg 2x, img/brand-1@3x.jpg 3x">
+                            <img src="img/brand-1.png" srcset="img/brand-1@2x.png 2x, img/brand-1@3x.png 3x">
                         </div>
                         <div class="brands-slider__item">
-                            <img src="img/brand-2.jpg" srcset="img/brand-2@2x.jpg 2x, img/brand-2@3x.jpg 3x">
+                            <img src="img/brand-2.png" srcset="img/brand-2@2x.png 2x, img/brand-2@3x.png 3x">
                         </div>
                         <div class="brands-slider__item">
-                            <img src="img/brand-3.jpg" srcset="img/brand-3@2x.jpg 2x, img/brand-3@3x.jpg 3x">
+                            <img src="img/brand-3.png" srcset="img/brand-3@2x.png 2x, img/brand-3@3x.png 3x">
                         </div>
                         <div class="brands-slider__item">
-                            <img src="img/brand-4.jpg" srcset="img/brand-4@2x.jpg 2x, img/brand-4@3x.jpg 3x">
+                            <img src="img/brand-4.png" srcset="img/brand-4@2x.png 2x, img/brand-4@3x.png 3x">
                         </div>
                         <div class="brands-slider__item">
-                            <img src="img/brand-1.jpg" srcset="img/brand-1@2x.jpg 2x, img/brand-1@3x.jpg 3x">
-                        </div>
-                        <div class="brands-slider__item">
-                            <img src="img/brand-2.jpg" srcset="img/brand-2@2x.jpg 2x, img/brand-2@3x.jpg 3x">
-                        </div>
-                        <div class="brands-slider__item">
-                            <img src="img/brand-3.jpg" srcset="img/brand-3@2x.jpg 2x, img/brand-3@3x.jpg 3x">
-                        </div>
-                        <div class="brands-slider__item">
-                            <img src="img/brand-4.jpg" srcset="img/brand-4@2x.jpg 2x, img/brand-4@3x.jpg 3x">
+                            <img src="img/brand-1.png" srcset="img/brand-1@2x.png 2x, img/brand-1@3x.png 3x">
                         </div>
                     </div>
                 </div>
@@ -481,11 +478,48 @@
                     </div>
                     <div class="mapslider-scroll">
                         <div class="mapslider">
+                            <script src="https://api-maps.yandex.ru/2.1/?apikey=f7b36f72-1b80-421b-94fb-334b0417313c&lang=ru_RU" type="text/javascript"></script>
+                            <script>
+                                ymaps.ready(function () {
+                                                            // Указывается идентификатор HTML-элемента.
+                                                            var moscow_map = new ymaps.Map("map1", {
+                                                                center: [59.953025, 30.289476],
+                                                                zoom: 15,
+                                                                controls: []
+                                                            });
+                                
+                                                            var myPlacemark = new ymaps.Placemark([59.953025, 30.289476], {
+                                                                // Хинт показывается при наведении мышкой на иконку метки.
+                                                                hintContent: 'м. Спортивная (5 мин), Ждановская набережная, дом 3',
+                                                                // Балун откроется при клике по метке.
+                                                                balloonContent: 'м. Спортивная (5 мин), Ждановская набережная, дом 3'
+                                                            });
+                                
+                                                            // После того как метка была создана, добавляем её на карту.
+                                                            moscow_map.geoObjects.add(myPlacemark);
+                                
+                                                            var moscow_map2 = new ymaps.Map("map2", {
+                                                                center: [59.914394, 30.321869],
+                                                                zoom: 15,
+                                                                controls: []
+                                                            });
+                                
+                                                            var myPlacemark2 = new ymaps.Placemark([59.914394, 30.321869], {
+                                                                // Хинт показывается при наведении мышкой на иконку метки.
+                                                                hintContent: 'м. Технологический институт Клинский проспект, дом 24',
+                                                                // Балун откроется при клике по метке.
+                                                                balloonContent: 'м. Технологический институт Клинский проспект, дом 24'
+                                                            });
+                                
+                                                            // После того как метка была создана, добавляем её на карту.
+                                                            moscow_map2.geoObjects.add(myPlacemark2);
+                                                        });
+                            </script>
                             <div class="mapslider__item"><em>ежедневно 10:00 - 21:00</em>  <a href="tel:+7(921)343-07-43">+7 (921) 343-07-43</a>  <span>м. Спортивная (5 мин),<br>Ждановская набережная, дом 3</span>
-                                <iframe src="https://yandex.ru/map-widget/v1/-/CKAbF08S" allowfullscreen="true"></iframe>
+                                <div class="map" id="map1"></div>
                             </div>
                             <div class="mapslider__item"><em>ежедневно 10:00 - 21:00</em>  <a href="tel:++7(911)736-46-13">+7 (911) 736-46-13</a>  <span>м. Технологический институт<br>Клинский проспект, дом 24</span>
-                                <iframe src="https://yandex.ru/map-widget/v1/-/CKAb66ZQ" allowfullscreen="true"></iframe>
+                                <div class="map" id="map2"></div>
                             </div>
                         </div>
                     </div>
@@ -500,7 +534,7 @@
             </div>
         </footer>
     </div>
-    <script src="js/main.js?v=1579206603536"></script>
+    <script src="js/main.js?v=1579235086694"></script>
 </body>
 
 </html>

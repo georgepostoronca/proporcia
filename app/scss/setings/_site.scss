@@ -117,6 +117,21 @@ h1 {
 	line-height: 0.9;
 	letter-spacing: 0.2px;
 	color: #26252c;
+
+	@media(max-width: 1180px) {
+		font-size: 65px;
+		line-height: 1.1;
+	}
+
+	@media(max-width: 992px) {
+		font-size: 60px;
+	}
+
+	@media(max-width: 580px) {
+		font-size: 36px;
+		line-height: 0.89;
+		color: #26252c;
+	}
 }
 
 h2 {
@@ -294,4 +309,62 @@ input {
 
 .safari-scroll {
 	-webkit-overflow-scrolling: touch;
+}
+
+
+
+//Blocks Order
+#wrapper {
+	@media(max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+
+		.menu {
+			order: 1;
+		}
+
+		.header {
+			order: 2;
+		}
+
+		.bstylist {
+			order: 3;
+		}
+
+		.brands {
+			order: 4;
+		}
+
+		.bourall {
+			order: 5;
+		}
+
+		.stylistwork {
+			order: 10;
+		}
+
+		.reghaircut {
+			order: 11;
+		}
+
+		.teamstyl {
+			order: 8;
+		}
+
+		.stylstudy {
+			order: 9;
+		}
+
+		.registration {
+			order: 5;
+		}
+
+		.reputation {
+			order: 11;
+		}
+
+		.footer {
+			order: 12;
+		}
+	}
 }

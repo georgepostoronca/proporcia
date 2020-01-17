@@ -1,7 +1,11 @@
 .registration {
 	@media(max-width: 992px) {
-		width: calc(100% + 44px);
+		width: calc(100% + 22px);
 		margin-left: -22px;
+
+		.container {
+			padding-right: 0;
+		}
 	}
 
 
