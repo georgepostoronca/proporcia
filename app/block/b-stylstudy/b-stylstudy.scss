@@ -109,6 +109,7 @@
 	}
 
 	&-scroll {
+		-webkit-overflow-scrolling: touch;
 
 		@media(max-width: 767px) {
 			order: 3;

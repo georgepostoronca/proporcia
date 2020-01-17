@@ -7,7 +7,7 @@
 //= include ../../node_modules/svg4everybody/dist/svg4everybody.min.js
 //= include ../../node_modules/jquery-validation/dist/jquery.validate.js
 //= include ./jquery.maskedinput.min.js
-//= include ./parallax.js
+//= include ./rellax.min.js
 
 // Include All JS
 //= include ../block/**/*.js
@@ -42,7 +42,7 @@ if($(".brands-slider").length) {
 				}
 			}, {
 				breakpoint: 720,
-				settings: "unslick"
+				// settings: "unslick"
 			}
 		]
 	}
@@ -214,9 +214,9 @@ if($(".stylistwork__tab").length) {
 	var myEfficientFn = debounce(function() {
 		if( $(window).width() < 767 ) {
 			$(".stylistwork__tab").slick(repsliderSetings);
-			console.log("slick")
+			// console.log("slick")
 		} else {
-			console.log("Unslick")
+			// console.log("Unslick")
 			$(".stylistwork__tab").slick("unslick");
 		}
 	}, 250);
@@ -242,13 +242,19 @@ if($(".bstylist__grid").length) {
 	}
 
 	if( $(window).width() > 680) {
-		$(".bstylist__grid").slick("unslick");
+		try	{
+			$(".bstylist__grid").slick("unslick");
+
+		} catch(e) {
+			console.log(e)
+		}
 	} else {
 		$(".bstylist__grid").slick(bstylistgrid);
 	}
 
 	$(window).on('resize', function() {
 		if( $(window).width() > 680) {
+			console.log("Unslick")
 			$(".bstylist__grid").slick("unslick");
 		} else {
 			$(".bstylist__grid").slick(bstylistgrid);
@@ -279,3 +285,19 @@ $(".js__toggle-menu").click(function() {
 });
 
 
+// Parallax
+document.addEventListener("DOMContentLoaded", function() {
+	console.log("Rellax");
+	new Rellax('.rellax', {
+		speed: 1
+	});
+
+	// var rellax = new Rellax('.rellax', {
+	// 	speed: -2,
+	// 	center: false,
+	// 	wrapper: null,
+	// 	round: true,
+	// 	vertical: true,
+	// 	horizontal: false
+	// });
+});

@@ -37,6 +37,17 @@
 				margin-bottom: 45px;
 			}
 		}
+
+		.animitem {
+			&.animitem-1 {
+				top: 88px;
+			}
+
+			&.animitem-2 {
+				top: 67%;
+				left: -168px;
+			}
+		}
 	}
 
 	&__grid {

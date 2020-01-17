@@ -12,9 +12,17 @@
 
 	&__wrap {
 		display: flex;
+		position: relative;
 
 		@media(max-width: 680px) {
 			display: block;
+		}
+
+		.animitem {
+			&.animitem-1 {
+				top: -150px;
+				left: 34%;
+			}
 		}
 	}
 
