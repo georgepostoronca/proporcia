@@ -1724,7 +1724,7 @@ if($(".brands-slider").length) {
 				}
 			}, {
 				breakpoint: 720,
-				// settings: "unslick"
+				settings: "unslick"
 			}
 		]
 	}
@@ -1935,7 +1935,7 @@ if($(".bstylist__grid").length) {
 	}
 
 	$(window).on('resize', function() {
-		if( $(window).width() > 680) {
+		if( $(window).width() > 680 && !$(".bstylist__grid").hasClass(".slick-initialized")) {
 			console.log("Unslick")
 			$(".bstylist__grid").slick("unslick");
 		} else {

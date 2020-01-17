@@ -2670,8 +2670,8 @@ input.color-white {
 }
 
 .mapslider-scroll {
-    width: -webkit-calc(100% + 44px);
-    width: calc(100% + 44px);
+    width: -webkit-calc(100% + 22px);
+    width: calc(100% + 22px);
     padding-left: 22px;
     margin-left: -22px;
 }
@@ -2710,6 +2710,10 @@ input.color-white {
     color: rgba(255, 255, 255, .77);
     display: block;
     margin-bottom: 35px;
+}
+
+.mapslider__item .map {
+    overflow: hidden;
 }
 
 .mapslider__item iframe, .mapslider__item .map {
@@ -2909,6 +2913,13 @@ input.color-white {
     line-height: 2.06;
     color: #26252c;
     text-decoration: underline;
+}
+
+.menu.active {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
 }
 
 .menu.active .menu__nav {
@@ -3332,6 +3343,15 @@ input.color-white {
     h3 {
         font-size: 30px;
         line-height: 1;
+    }
+
+    .rellax {
+        -webkit-transform: translate3d(0, 0, 0) !important;
+        transform: translate3d(0, 0, 0) !important;
+    }
+
+    .animitem {
+        display: none !important;
     }
 
     .brands {
@@ -4073,10 +4093,39 @@ input.color-white {
 
     .header__info {
         width: 100%;
+        position: relative;
+    }
+
+    .header__info:after {
+        content: "";
+        width: 60%;
+        height: 100%;
+        background: url("../img/head-img@2x.jpg") center center no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: -22px;
+        z-index: 0;
+    }
+
+    .header__info h1 {
+        position: relative;
+        z-index: 2;
+    }
+
+    .header__info form {
+        position: relative;
+        z-index: 2;
     }
 
     .header__img {
         display: none;
+    }
+
+    .header__regonline {
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -4401,7 +4450,7 @@ input.color-white {
 
     input {
         padding-left: 25px;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .brands {
@@ -4790,6 +4839,18 @@ input.color-white {
 
     .header__info {
         padding-top: 55px;
+    }
+
+    .header__info:after {
+        width: 203px;
+        height: 492px;
+        background: url("../img/header-img-mobile@2x.jpg") center center no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        position: absolute;
+        top: -44px;
+        right: -22px;
+        z-index: 0;
     }
 
     .header__info h1 {

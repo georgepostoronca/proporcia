@@ -34,10 +34,38 @@ $media-header-num: 992px;
 
 		@media(max-width: 767px) {
 			width: 100%;
+			position: relative;
+
+			&:after {
+				content: "";
+				width: 60%;
+				height: 100%;
+				//width: 203px;
+				//height: 492px;
+				//background: url("../img/header-img-mobile@2x.jpg") top right no-repeat;
+				background: url("../img/head-img@2x.jpg") center center no-repeat;
+				background-size: cover;
+				position: absolute;
+				//top: -44px;
+				top: 0;
+				right: -22px;
+				z-index: 0;
+			}
 		}
 
 		@media(max-width: 580px) {
 			padding-top: 55px;
+
+			&:after {
+				width: 203px;
+				height: 492px;
+				background: url("../img/header-img-mobile@2x.jpg") center center no-repeat;
+				background-size: cover;
+				position: absolute;
+				top: -44px;
+				right: -22px;
+				z-index: 0;
+			}
 		}
 
 		h1 {
@@ -45,6 +73,11 @@ $media-header-num: 992px;
 
 			@media(max-width: 992px) {
 				margin-bottom: 40px;
+			}
+
+			@media(max-width: 767px) {
+				position: relative;
+				z-index: 2;
 			}
 
 			@media(max-width: 580px) {
@@ -58,6 +91,11 @@ $media-header-num: 992px;
 
 			@media(max-width:  $media-header-num) {
 				flex-direction: column;
+			}
+
+			@media(max-width: 767px) {
+				position: relative;
+				z-index: 2;
 			}
 
 			input {
@@ -228,6 +266,11 @@ $media-header-num: 992px;
 	}
 
 	&__regonline {
+
+		@media(max-width: 767px) {
+			position: relative;
+			z-index: 2;
+		}
 
 		@media(max-width: 580px) {
 			margin-bottom: 16px;

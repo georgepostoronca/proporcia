@@ -100,7 +100,7 @@
 	}
 
 	&-scroll {
-		width: calc(100% + 44px);
+		width: calc(100% + 22px);
 		padding-left: 22px;
 		margin-left: -22px;
 		@extend .safari-scroll;
@@ -190,6 +190,10 @@
 				font-style: normal;
 				margin-bottom: 48px;
 			}
+		}
+
+		.map {
+			overflow: hidden;
 		}
 
 		iframe, .map {
