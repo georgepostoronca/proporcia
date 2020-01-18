@@ -78,13 +78,15 @@
 
 	&--discount {
 		width: 406px;
-		height: 406px;
+		//height: 406px;
 		padding-left: 68px;
 		padding-right: 68px;
 		padding-top: 47px;
 		padding-bottom: 57px;
 
 		@media(max-width: 450px) {
+			padding-top: 40px;
+			padding-bottom: 40px;
 			padding-left: 20px;
 			padding-right: 20px;
 		}

@@ -7663,3 +7663,9 @@ $(".js__more-article").click(function() {
 		rellax.refresh();
 	}
 });
+
+
+// Open Review
+$(".js__openrew").click(function() {
+	$(".readrew").fadeToggle().toggleClass("active");
+});

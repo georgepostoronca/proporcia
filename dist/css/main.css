@@ -1790,7 +1790,6 @@ input.color-white {
 
 .popup--discount {
     width: 406px;
-    height: 406px;
     padding-left: 68px;
     padding-right: 68px;
     padding-top: 47px;
@@ -2050,6 +2049,56 @@ input.color-white {
     letter-spacing: normal;
     color: #292b34;
     display: block;
+}
+
+.readrew {
+    width: -webkit-calc(100% + 20px);
+    width: calc(100% + 20px);
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 88px;
+    display: none;
+}
+
+.readrew.active {
+    display: -ms-flexbox !important;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+}
+
+.readrew__item {
+    width: -webkit-calc(33.333% - 20px);
+    width: calc(33.333% - 20px);
+    margin-bottom: 25px;
+    margin-right: 20px;
+}
+
+.readrew__item img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.readrew__btn {
+    width: 100%;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.readrew__btn .btn {
+    width: 370px;
 }
 
 .bstylist {
@@ -3569,6 +3618,10 @@ input.color-white {
         width: 170px;
     }
 
+    .readrew {
+        margin-top: 40px;
+    }
+
     .bstylist {
         margin-top: 60px;
     }
@@ -4062,6 +4115,16 @@ input.color-white {
 
     .registration__form-input {
         width: 100%;
+    }
+
+    .readrew {
+        width: -webkit-calc(100% + 22px);
+        width: calc(100% + 22px);
+    }
+
+    .readrew__item {
+        width: -webkit-calc(50% - 22px);
+        width: calc(50% - 22px);
     }
 
     .bstylist {
@@ -4710,6 +4773,20 @@ input.color-white {
         height: 252px;
     }
 
+    .readrew {
+        width: 100%;
+    }
+
+    .readrew__item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .readrew__btn .btn {
+        width: 275px;
+    }
+
     .bstylist {
         margin-top: 105px;
     }
@@ -5046,6 +5123,8 @@ input.color-white {
 
 @media (max-width: 450px) {
     .popup--discount {
+        padding-top: 40px;
+        padding-bottom: 40px;
         padding-left: 20px;
         padding-right: 20px;
     }
