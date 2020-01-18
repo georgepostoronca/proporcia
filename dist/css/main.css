@@ -3553,6 +3553,8 @@ input.color-white {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     justify-content: space-between;
+    position: relative;
+    z-index: 2;
 }
 
 .loadmore__item {

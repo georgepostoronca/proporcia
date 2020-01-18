@@ -7387,7 +7387,7 @@ AOS.init({
 	delay: 0,
 	disable: false,
 	once: true,
-	duration: 800,
+	duration: 600,
 });
 
 // SVG
