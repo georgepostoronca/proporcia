@@ -286,9 +286,10 @@ $(".js__toggle-menu").click(function() {
 
 
 // Parallax
+var rellax;
 document.addEventListener("DOMContentLoaded", function() {
 	console.log("Rellax");
-	new Rellax('.rellax', {
+	rellax = new Rellax('.rellax', {
 		speed: 1
 	});
 
@@ -300,4 +301,50 @@ document.addEventListener("DOMContentLoaded", function() {
 	// 	vertical: true,
 	// 	horizontal: false
 	// });
+});
+
+
+
+
+// Load More
+function refreshFloat() {
+	var flag = true;
+	$(".bstylist__item.active").each(function() {
+		if(flag) {
+			$(this).css("float", "left");
+			flag = false;
+		} else {
+			$(this).css("float", "right");
+			flag = true;
+		}
+	});
+}
+refreshFloat();
+
+// function scanStylistItem() {
+// 	var arr = [];
+// 	$(".bstylist__item").each(function () {
+// 		arr.push({
+//
+// 		});
+// 	});
+// }
+
+$(".js__more-article").click(function() {
+	var el = $(".js__stylistitem.active");
+	var lena = $(".js__stylistitem").length;
+	var leng = el.length - 1;
+
+	if(!(leng + 1 == lena)) {
+		$("html, body").animate({
+			scrollTop: $(".js__stylistitem").eq(leng).offset().top
+		});
+
+		$(".js__stylistitem").eq(leng + 1).fadeIn().addClass("active");
+		$(".js__stylistitem").eq(leng + 2).fadeIn().addClass("active");
+		$(".js__stylistitem").eq(leng + 3).fadeIn().addClass("active");
+		$(".js__stylistitem").eq(leng + 4).fadeIn().addClass("active");
+		refreshFloat();
+		rellax.refresh();
+	}
 });

@@ -1968,6 +1968,10 @@ input.color-white {
     left: -168px;
 }
 
+.bstylist__grid .slick-slide {
+    float: left !important;
+}
+
 .bstylist__grid .slick-dots {
     display: none !important;
 }
@@ -1984,6 +1988,7 @@ input.color-white {
     width: 470px;
     margin-bottom: 116px;
     float: right;
+    outline: none;
 }
 
 .bstylist__item-img {
@@ -2101,6 +2106,7 @@ input.color-white {
     text-align: center;
     color: #ffffff;
     margin-bottom: 70px;
+    display: block;
 }
 
 .loadmore {
@@ -2113,6 +2119,7 @@ input.color-white {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     justify-content: flex-end;
+    width: 100%;
 }
 
 .loadmore__wrap {
@@ -5015,6 +5022,14 @@ input.color-white {
 
     .bstylist__grid:after {
         clear: both;
+    }
+
+    .bstylist__item {
+        display: none;
+    }
+
+    .bstylist__item.active {
+        display: block;
     }
 
     .bstylist__item:nth-child(odd) {

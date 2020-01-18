@@ -55,6 +55,10 @@
 		//flex-wrap: wrap;
 		//justify-content: space-between;
 
+		.slick-slide {
+			float: left !important;
+		}
+
 		@media(max-width: 680px) {
 			width: calc(100% + 22px);
 			padding-left: 22px;
@@ -103,6 +107,15 @@
 		width: 470px;
 		margin-bottom: 116px;
 		float: right;
+		outline: none;
+
+		@media(min-width: 681px) {
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		}
 
 		@media(max-width: 1180px) {
 			width: calc(50% - 20px);
@@ -328,6 +341,7 @@
 				text-align: center;
 				color: #ffffff;
 				margin-bottom: 70px;
+				display: block;
 
 				@media(max-width: 992px) {
 					margin-bottom: 30px;
@@ -351,6 +365,7 @@
 
 	display: flex;
 	justify-content: flex-end;
+	width: 100%;
 
 	&__wrap {
 		width: 570px;
