@@ -1,0 +1,18 @@
+{# Include #}
+{% extends "inc/main.njk" %}
+
+{# Title #}
+{% set title = "Popup" %}
+
+{# Dop Class #}
+{#{% set htmlClass = "htmlClass" %}#}
+{#{% set bodyClass = "bodyClass" %}#}
+
+
+{% block content %}
+	{% include "menu/menu.njk" %}
+	<a href="#popup-postform" data-fancybox>popup-postform</a>
+	<a href="#popup--discount" data-fancybox>popup--discount</a>
+	{% include "b-popup/b-popup.njk" %}
+	{% include "footer/footer.njk" %}
+{% endblock %}

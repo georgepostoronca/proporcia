@@ -1714,6 +1714,115 @@ input.color-white {
     margin-top: 15px;
 }
 
+.popup {
+    display: none;
+    -webkit-box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, .19);
+    box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, .19);
+    background-color: #ffffff;
+    padding: 0;
+}
+
+.popup-postform {
+    width: 570px;
+    height: 406px;
+}
+
+.popup-postform .popup__wrap {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+}
+
+.popup-postform__img {
+    width: 271px;
+}
+
+.popup-postform__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center center;
+    object-position: center center;
+}
+
+.popup-postform__content {
+    padding-left: 20px;
+    padding-right: 20px;
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    padding-top: 45px;
+}
+
+.popup-postform__content img {
+    width: 63px;
+    height: 74px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    opacity: 0.4;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 36px;
+}
+
+.popup-postform__content h3 {
+    display: block;
+    width: 100%;
+    font-size: 26px;
+    line-height: 1.08;
+    text-align: center;
+    color: #26252c;
+    font-weight: bold;
+    margin-bottom: 11px;
+}
+
+.popup-postform__content span {
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: center;
+    color: #302e36;
+    display: block;
+}
+
+.popup--discount {
+    width: 406px;
+    height: 406px;
+    padding-left: 68px;
+    padding-right: 68px;
+    padding-top: 47px;
+    padding-bottom: 57px;
+}
+
+.popup--discount h3 {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.08;
+    letter-spacing: normal;
+    color: #393a45;
+    margin-bottom: 33px;
+}
+
+.popup--discount input {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.popup--discount .btn {
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+.popup--discount em {
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #393a45;
+}
+
 .reghaircut {
     color: #fff;
     background-color: #1b1f26;
@@ -4510,6 +4619,14 @@ input.color-white {
         margin-top: 9px;
     }
 
+    .popup-postform {
+        height: 300px;
+    }
+
+    .popup-postform__img {
+        width: 180px;
+    }
+
     .reghaircut {
         padding-bottom: 42px;
     }
@@ -4905,6 +5022,10 @@ input.color-white {
 }
 
 @media (max-width: 480px) {
+    .popup-postform__img {
+        display: none;
+    }
+
     .reputation__btn .btn {
         width: 100%;
     }
@@ -4920,6 +5041,13 @@ input.color-white {
 
     .studyslide__item i {
         height: 184px;
+    }
+}
+
+@media (max-width: 450px) {
+    .popup--discount {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
