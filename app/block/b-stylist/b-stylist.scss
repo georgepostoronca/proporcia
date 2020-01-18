@@ -383,10 +383,10 @@
 
 .loadmore {
 	margin-top: -349px;
-
 	display: flex;
 	justify-content: flex-end;
 	width: 100%;
+	float: right;
 
 	&__wrap {
 		width: 570px;
@@ -394,6 +394,7 @@
 
 		@media(max-width: 1180px) {
 			margin-right: 0;
+			// width: calc(50% - 20px);
 			//display: flex;
 			//justify-content: center;
 		}
@@ -407,7 +408,7 @@
 	@media(max-width: 1180px) {
 		width: calc(50% - 20px);
 		position: relative;
-		left: 40px;
+		// left: 40px;
 		//width: 100%;
 		//margin-top: 0;
 		//margin-right: 0;

@@ -7703,9 +7703,9 @@ $(".js__more-article").click(function() {
 	var leng = el.length - 1;
 
 	if(!(leng + 1 == lena)) {
-		$("html, body").animate({
-			scrollTop: $(".js__stylistitem").eq(leng).offset().top + $(".js__stylistitem.active").height()
-		});
+		// $("html, body").animate({
+		// 	scrollTop: $(".js__stylistitem").eq(leng).offset().top + $(".js__stylistitem.active").height()
+		// });
 
 		$(".js__stylistitem").eq(leng + 1).fadeIn().addClass("active");
 		$(".js__stylistitem").eq(leng + 2).fadeIn().addClass("active");
