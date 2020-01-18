@@ -73,7 +73,7 @@ AOS.init({
 	delay: 0,
 	disable: false,
 	once: true,
-	duration: 400,
+	duration: 800,
 });
 
 // SVG
