@@ -54,6 +54,22 @@
 			@media(max-width: 580px) {
 				width: 100%;
 			}
+
+			input {
+				margin-right: 20px;
+			}
+
+			.btn {
+				width: 270px;
+
+				@media(max-width: 1180px) {
+					width: 240px;
+				}
+
+				@media(max-width: 580px) {
+					width: 100%;
+				}
+			}
 		}
 	}
 
@@ -117,6 +133,10 @@
 			letter-spacing: normal;
 			color: #ffffff;
 			margin-top: 20px;
+
+			@media(max-width: 580px) {
+				width: 100%;
+			}
 		}
 	}
 }

@@ -9,9 +9,72 @@
 //= include ../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js
 //= include ./jquery.maskedinput.min.js
 //= include ./rellax.min.js
+//= include ./lax.min.js
+//= include ./aos.min.js
 
 // Include All JS
 //= include ../block/**/*.js
+
+
+// Zoom
+// function parallax() {
+// 	var $slider = document.querySelector(".zoom");
+
+// 	var yPos = window.pageYOffset / $slider.dataset.speed;
+// 	yPos = -yPos;
+	
+// 	var coords = '0% '+ yPos + 'px';
+	
+// 	// $slider.style.backgroundPosition = coords;
+// 	console.log(yPos)
+// 	// $slider.style.transform = "scale("+  +")"
+// }
+
+
+// window.addEventListener("scroll", function(){
+// 	parallax();	
+// });
+
+// Parallax
+var rellax;
+document.addEventListener("DOMContentLoaded", function() {
+	// console.log("Rellax");
+	rellax = new Rellax('.rellax', {
+		speed: 1
+	});
+
+	// var rellax = new Rellax('.rellax', {
+	// 	speed: -2,
+	// 	center: false,
+	// 	wrapper: null,
+	// 	round: true,
+	// 	vertical: true,
+	// 	horizontal: false
+	// });
+});
+
+// LAX
+window.onload = function() {
+	lax.setup() // init
+
+	var updateLax = function() {
+		lax.update(window.scrollY)
+		window.requestAnimationFrame(updateLax)
+	}
+
+	window.requestAnimationFrame(updateLax)
+}
+
+
+// AOS
+AOS.init({
+	// disable: "mobile",
+	startEvent: "load",
+	delay: 0,
+	disable: false,
+	once: true,
+	duration: 200,
+});
 
 // SVG
 svg4everybody();
@@ -30,6 +93,9 @@ if($(".brands-slider").length) {
 		infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 1,
+		swipe: true,
+		swipeToSlide: true,
+		touchThreshold: 20,
 		responsive: [
 			{
 				breakpoint: 992,
@@ -61,6 +127,9 @@ if($(".teamslider").length) {
 		infinite: true,
 		adaptiveHeight: true,
 		arrows: false,
+		swipe: true,
+		swipeToSlide: true,
+		touchThreshold: 20,
 	});
 
 	$(".teamslider__prev").click(function() {
@@ -80,6 +149,9 @@ if($(".studyslide").length) {
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
+		swipe: true,
+		swipeToSlide: true,
+		touchThreshold: 20,
 		// adaptiveHeight: true,
 		responsive: [
 			{
@@ -120,6 +192,9 @@ if($(".repslider").length) {
 		infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 1,
+		swipe: true,
+		swipeToSlide: true,
+		touchThreshold: 20,
 		responsive: [
 			{
 				breakpoint: 992,
@@ -182,6 +257,9 @@ if($(".stylistwork__tab").length) {
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
+		swipe: true,
+		swipeToSlide: true,
+		touchThreshold: 20,
 		responsive: [
 			{
 				breakpoint: 767,
@@ -234,6 +312,9 @@ if($(".bstylist__grid").length) {
 		infinite: true,
 		// slidesToScroll: 1,
 		variableWidth: true,
+		swipe: true,
+		swipeToSlide: true,
+		touchThreshold: 20,
 		// responsive: [
 		// 	{
 		// 		// breakpoint: 680,
@@ -247,7 +328,7 @@ if($(".bstylist__grid").length) {
 			$(".bstylist__grid").slick("unslick");
 
 		} catch(e) {
-			console.log(e)
+			// console.log(e)
 		}
 	} else {
 		$(".bstylist__grid").slick(bstylistgrid);
@@ -283,29 +364,8 @@ $(".js__toggle-menu").click(function() {
 	$(this).toggleClass("active");
 	$(".js__menu-nav").toggleClass("active");
 	$(".js__menu").toggleClass("active");
+	$("body").toggleClass("block-scroll");
 });
-
-
-// Parallax
-var rellax;
-document.addEventListener("DOMContentLoaded", function() {
-	console.log("Rellax");
-	rellax = new Rellax('.rellax', {
-		speed: 1
-	});
-
-	// var rellax = new Rellax('.rellax', {
-	// 	speed: -2,
-	// 	center: false,
-	// 	wrapper: null,
-	// 	round: true,
-	// 	vertical: true,
-	// 	horizontal: false
-	// });
-});
-
-
-
 
 // Load More
 function refreshFloat() {
@@ -322,14 +382,6 @@ function refreshFloat() {
 }
 refreshFloat();
 
-// function scanStylistItem() {
-// 	var arr = [];
-// 	$(".bstylist__item").each(function () {
-// 		arr.push({
-//
-// 		});
-// 	});
-// }
 
 $(".js__more-article").click(function() {
 	var el = $(".js__stylistitem.active");
@@ -338,7 +390,7 @@ $(".js__more-article").click(function() {
 
 	if(!(leng + 1 == lena)) {
 		$("html, body").animate({
-			scrollTop: $(".js__stylistitem").eq(leng).offset().top
+			scrollTop: $(".js__stylistitem").eq(leng).offset().top + $(".js__stylistitem.active").height()
 		});
 
 		$(".js__stylistitem").eq(leng + 1).fadeIn().addClass("active");
@@ -347,9 +399,42 @@ $(".js__more-article").click(function() {
 		$(".js__stylistitem").eq(leng + 4).fadeIn().addClass("active");
 		refreshFloat();
 		rellax.refresh();
+		AOS.refresh();
+
+		// console.log(leng + 1, lena);
+		if((leng + 4 >= lena)) {
+			$(this).fadeOut()
+		}
+	} else {
+		$(this).fadeOut()
 	}
 });
 
+// Load More review
+$(".js__readrew-more").click(function() {
+	var el = $(".js__readrew.active");
+	var lena = $(".js__readrew").length;
+	var leng = el.length - 1;
+
+	// console.log(leng + 4, lena)
+
+	if(!(leng + 1 == lena)) {
+		// $("html, body").animate({
+		// 	scrollTop: $(".js__readrew").eq(leng).offset().top
+		// });
+
+		$(".js__readrew").eq(leng + 1).fadeIn().addClass("active");
+		$(".js__readrew").eq(leng + 2).fadeIn().addClass("active");
+		$(".js__readrew").eq(leng + 3).fadeIn().addClass("active");
+		$(".js__readrew").eq(leng + 4).fadeIn().addClass("active");
+
+		if((leng + 4 >= lena)) {
+			$(this).fadeOut()
+		}
+	} else {
+		$(this).fadeOut()
+	}
+});
 
 // Open Review
 $(".js__openrew").click(function() {

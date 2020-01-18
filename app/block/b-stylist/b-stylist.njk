@@ -1,7 +1,7 @@
 <div class="bstylist">
 	<div class="container">
 		<div class="bstylist__wrap">
-			<h2 class="rellax">Работы <br> cтилистов</h2>
+			<h2 class="rellax" data-aos="fade-left" data-rellax-speed="1" data-rellax-percentage="0.01">Работы <br> cтилистов</h2>
 
 			<div class="animitem animitem-1 half-hor2 rellax" data-rellax-speed="3" data-rellax-percentage="0.5"></div>
 			<div class="animitem animitem-2 half-ver rellax" data-rellax-speed="3" data-rellax-percentage="0.5"></div>
@@ -11,18 +11,19 @@
 
 				<div class="bstylist__item js__stylistitem active">
 					<div class="bstylist__item-img">
-						<img alt="IMG" src="img/stylist-img-1.jpg" class="rellax" data-rellax-speed="-2"
-							 data-rellax-percentage="0.5"
+						<img alt="IMG" src="img/stylist-img-1.jpg" 
+							class="lax"
+							data-lax-scale="(vh*2) 1.2, (vh*0.5) 1"
 							 srcset="img/stylist-img-1@2x.jpg 2x, img/stylist-img-1@3x.jpg 3x">
 					</div>
 
 					<div class="bstylist__item-info">
-						<div class="name">
+						<div class="name" data-aos="fade-up">
 							<i>Стилист</i>
 							<span>Виктор Шиферсон</span>
 						</div>
 
-						<div class="price">
+						<div class="price" data-aos="fade-up">
 							<em>Стрижка - 3 000 ₽</em>
 							<em>Окрашивание - 12 000 ₽</em>
 						</div>
@@ -31,18 +32,19 @@
 
 				<div class="bstylist__item js__stylistitem active">
 					<div class="bstylist__item-img">
-						<img alt="IMG" src="img/stylist-img-2.jpg" class="rellax" data-rellax-speed="-2"
+						<img alt="IMG" src="img/stylist-img-2.jpg" 
+							class="rellax" data-rellax-speed="-2"
 							 data-rellax-percentage="0.5"
 							 srcset="img/stylist-img-2@2x.jpg 2x, img/stylist-img-2@3x.jpg 3x">
 					</div>
 
 					<div class="bstylist__item-info">
-						<div class="name">
+						<div class="name" data-aos="fade-up">
 							<i>Стилист</i>
 							<span>Людмила Пажитнова</span>
 						</div>
 
-						<div class="price">
+						<div class="price" data-aos="fade-up">
 							<em>Стрижка - 3 000 ₽</em>
 						</div>
 					</div>
@@ -56,12 +58,12 @@
 					</div>
 
 					<div class="bstylist__item-info">
-						<div class="name">
+						<div class="name"  data-aos="fade-up">
 							<i>Стилист</i>
 							<span>Виктор Шиферсон</span>
 						</div>
 
-						<div class="price">
+						<div class="price"  data-aos="fade-up">
 							<em>Стрижка - 3 000 ₽</em>
 							<em>Окрашивание - 12 000 ₽</em>
 						</div>
@@ -76,91 +78,353 @@
 					</div>
 
 					<div class="bstylist__item-info">
-						<div class="name">
+						<div class="name" data-aos="fade-up">
 							<i>Стилист</i>
 							<span>Виктор Шиферсон</span>
 						</div>
 
-						<div class="price">
+						<div class="price" data-aos="fade-up">
 							<em>Стрижка - 3 000 ₽</em>
 							<em>Окрашивание - 12 000 ₽</em>
 						</div>
 					</div>
 				</div>
 
-
-{#				=====================================#}
-{#				=====================================#}
-				{% for el in range(1,6) %}
-					<div class="bstylist__item js__stylistitem">
-						<div class="bstylist__item-img">
-							<img alt="IMG" src="img/stylist-img-4.jpg" class="rellax" data-rellax-speed="-2"
-								 data-rellax-percentage="0.5"
-								 srcset="img/stylist-img-4@2x.jpg 2x, img/stylist-img-4@3x.jpg 3x">
-						</div>
-
-						<div class="bstylist__item-info">
-							<div class="name">
-								<i>Стилист</i>
-								<span>Виктор Шиферсон</span>
-							</div>
-
-							<div class="price">
-								<em>Стрижка - 3 000 ₽</em>
-								<em>Окрашивание - 12 000 ₽</em>
-							</div>
-						</div>
-					</div>
-
-					<div class="bstylist__item js__stylistitem">
-						<div class="bstylist__item-img">
-							<img alt="IMG" src="img/stylist-img-4.jpg" class="rellax" data-rellax-speed="-2"
-								 data-rellax-percentage="0.5"
-								 srcset="img/stylist-img-4@2x.jpg 2x, img/stylist-img-4@3x.jpg 3x">
-						</div>
-
-						<div class="bstylist__item-info">
-							<div class="name">
-								<i>Стилист</i>
-								<span>Виктор Шиферсон</span>
-							</div>
-
-							<div class="price">
-								<em>Стрижка - 3 000 ₽</em>
-								<em>Окрашивание - 12 000 ₽</em>
-							</div>
-						</div>
-					</div>
-
-					<div class="bstylist__item js__stylistitem">
-						<div class="bstylist__item-img">
-							<img alt="IMG" src="img/stylist-img-2.jpg" class="rellax" data-rellax-speed="-2"
-								 data-rellax-percentage="0.5"
-								 srcset="img/stylist-img-2@2x.jpg 2x, img/stylist-img-2@3x.jpg 3x">
-						</div>
-
-						<div class="bstylist__item-info">
-							<div class="name">
-								<i>Стилист</i>
-								<span>Виктор Шиферсон</span>
-							</div>
-
-							<div class="price">
-								<em>Стрижка - 3 000 ₽</em>
-								<em>Окрашивание - 12 000 ₽</em>
-							</div>
-						</div>
-					</div>
-				{% endfor %}
-{#				=====================================#}
-{#				=====================================#}
-
-
-				<div class="bstylist__item bstylist__item--discount active">
+				{# Discount #}
+				<div class="bstylist__item bstylist__item--discount bstylist__item--mobile">
 					<b>-15%</b>
 					<p>Запишитесь к стилисту прямо сейчас и получите скидку 15% на окрашивание</p>
 					<em>акция действует до 25.12</em>
-					<a href="#" class="btn">
+					<a href="#popup--discount" data-fancybox class="btn">
+						<span>Записаться</span>
+					</a>
+				</div>
+
+
+{#				=====================================#}
+{#				=====================================#}
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-4.jpg" 
+						class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-4@2x.jpg 2x, img/stylist-img-4@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-4.jpg" class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-4@2x.jpg 2x, img/stylist-img-4@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-2.jpg" class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-2@2x.jpg 2x, img/stylist-img-2@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-4.jpg" 
+						class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-4@2x.jpg 2x, img/stylist-img-4@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				{# Discount #}
+				<div class="bstylist__item bstylist__item--discount bstylist__item--mobile">
+					<b>-15%</b>
+					<p>Запишитесь к стилисту прямо сейчас и получите скидку 15% на окрашивание</p>
+					<em>акция действует до 25.12</em>
+					<a href="#popup--discount" data-fancybox class="btn">
+						<span>Записаться</span>
+					</a>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-4.jpg" class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-4@2x.jpg 2x, img/stylist-img-4@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-2.jpg" class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-2@2x.jpg 2x, img/stylist-img-2@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-4.jpg" 
+						class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-4@2x.jpg 2x, img/stylist-img-4@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-4.jpg" class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-4@2x.jpg 2x, img/stylist-img-4@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				{# Discount #}
+				<div class="bstylist__item bstylist__item--discount bstylist__item--mobile">
+					<b>-15%</b>
+					<p>Запишитесь к стилисту прямо сейчас и получите скидку 15% на окрашивание</p>
+					<em>акция действует до 25.12</em>
+					<a href="#popup--discount" data-fancybox class="btn">
+						<span>Записаться</span>
+					</a>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-2.jpg" class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-2@2x.jpg 2x, img/stylist-img-2@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-4.jpg" class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-4@2x.jpg 2x, img/stylist-img-4@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-2.jpg" class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-2@2x.jpg 2x, img/stylist-img-2@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-4.jpg" 
+						class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-4@2x.jpg 2x, img/stylist-img-4@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				{# Discount #}
+				<div class="bstylist__item bstylist__item--discount bstylist__item--mobile">
+					<b>-15%</b>
+					<p>Запишитесь к стилисту прямо сейчас и получите скидку 15% на окрашивание</p>
+					<em>акция действует до 25.12</em>
+					<a href="#popup--discount" data-fancybox class="btn">
+						<span>Записаться</span>
+					</a>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-4.jpg" class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-4@2x.jpg 2x, img/stylist-img-4@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+
+				<div class="bstylist__item js__stylistitem">
+					<div class="bstylist__item-img">
+						<img alt="IMG" src="img/stylist-img-2.jpg" class="rellax" data-rellax-speed="-2"
+							data-rellax-percentage="0.5"
+								srcset="img/stylist-img-2@2x.jpg 2x, img/stylist-img-2@3x.jpg 3x">
+					</div>
+
+					<div class="bstylist__item-info">
+						<div class="name" data-aos="fade-up">
+							<i>Стилист</i>
+							<span>Виктор Шиферсон</span>
+						</div>
+
+						<div class="price" data-aos="fade-up">
+							<em>Стрижка - 3 000 ₽</em>
+							<em>Окрашивание - 12 000 ₽</em>
+						</div>
+					</div>
+				</div>
+{#				=====================================#}
+{#				=====================================#}
+
+
+				<div class="bstylist__item bstylist__item--discount bstylist__item--desktop active">
+					<b>-15%</b>
+					<p>Запишитесь к стилисту прямо сейчас и получите скидку 15% на окрашивание</p>
+					<em>акция действует до 25.12</em>
+					<a href="#popup--discount" data-fancybox class="btn">
 						<span>Записаться</span>
 					</a>
 				</div>

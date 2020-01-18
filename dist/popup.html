@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-    <link rel="stylesheet" href="css/main.css?v=1579315341303">
+    <link rel="stylesheet" href="css/main.css?v=1579374297461">
 </head>
 
 <body>
@@ -21,11 +21,11 @@
                     <a href="/" class="menu__logo">
                         <img src="ico/logo.png" srcset="ico/logo@2x.png 2x, ico/logo@3x.png 3x" alt="IMG">
                     </a>
-                    <nav class="menu__nav js__menu-nav"><a href="#Услуги">Услуги</a>  <a href="#Портфолио">Портфолио</a>  <a href="#Прайс">Прайс</a>  <a href="#О-студии">О студии</a>  <a href="#Контакты">Контакты</a>  <a href="#Записаться-on-line" class="menu__nav-reg">Записаться on-line</a>
+                    <nav class="menu__nav js__menu-nav"><a href="#Услуги">Услуги</a>  <a href="#Портфолио">Портфолио</a>  <a href="#Прайс">Прайс</a>  <a href="#О-студии">О студии</a>  <a href="#Контакты">Контакты</a>  <a href="#popup--reg" data-fancybox class="menu__nav-reg">Записаться on-line</a>
                     </nav>
-                    <div class="menu__phone"><a href="tel:+7(921)343-07-43">+7 (921) 343-07-43</a>
+                    <div class="menu__phone"><a href="tel:+7(921)343-07-43">+7 (921) 343-07-43</a>  <a href="#popup--reg" class="regonline" data-fancybox>Записаться on-line</a>
                     </div>
-                    <div class="menu__regonline"><a href="#Записаться-on-line">Записаться on-line</a>
+                    <div class="menu__regonline"><a href="#popup--reg" data-fancybox>Записаться on-line</a>
                     </div>
                     <div class="menu__btn js__toggle-menu"><span></span>
                     </div>
@@ -48,7 +48,16 @@
                 <form action="#">
                     <h3>Получите скидку 15% на окрашивание</h3>
                     <input class="phone" type="text" placeholder="+7 999 999 99 99">
-                    <button class="btn" type="submit">Поличить</button> <em>Нажимая на кнопку, вы даете согласие на обработку своих персональных данных</em>
+                    <button class="btn" type="submit">Получить</button> <em>Нажимая на кнопку, вы даете согласие на обработку своих персональных данных</em>
+                </form>
+            </div>
+        </div>
+        <div class="popup popup--discount" id="popup--reg">
+            <div class="popup__wrap">
+                <form action="#">
+                    <h3>Записаться</h3>
+                    <input class="phone" type="text" placeholder="+7 999 999 99 99">
+                    <button class="btn" type="submit">Записаться</button> <em>Нажимая на кнопку, вы даете согласие на обработку своих персональных данных</em>
                 </form>
             </div>
         </div>
@@ -56,16 +65,16 @@
             <div class="container">
                 <div class="footer__wrap">
                     <div class="footer__head">
-                        <div>
+                        <div data-aos="fade-left">
                             <h2>Контакты</h2>
                         </div>
-                        <div class="social">
-                            <a href="#vk" class="vk">
+                        <div class="social" data-aos="fade-right">
+                            <a href="https://vk.com/prophair" target="_blank" class="vk">
                                 <svg class="svg svg-vk" width="50" height="50">
                                     <use xlink:href="ico/sprite/sprite.svg#vk"></use>
                                 </svg>
                             </a>
-                            <a href="#instagram">
+                            <a href="https://www.instagram.com/salonprop/" target="_blank">
                                 <svg class="svg svg-instagram" width="50" height="50">
                                     <use xlink:href="ico/sprite/sprite.svg#instagram"></use>
                                 </svg>
@@ -111,10 +120,10 @@
                                                             moscow_map2.geoObjects.add(myPlacemark2);
                                                         });
                             </script>
-                            <div class="mapslider__item"><em>ежедневно 10:00 - 21:00</em>  <a href="tel:+7(921)343-07-43">+7 (921) 343-07-43</a>  <span>м. Спортивная (5 мин),<br>Ждановская набережная, дом 3</span>
+                            <div class="mapslider__item" data-aos="fade-right"><em>ежедневно 10:00 - 21:00</em>  <a href="tel:+7(921)343-07-43">+7 (921) 343-07-43</a>  <span>м. Спортивная (5 мин),<br>Ждановская набережная, дом 3</span>
                                 <div class="map" id="map1"></div>
                             </div>
-                            <div class="mapslider__item"><em>ежедневно 10:00 - 21:00</em>  <a href="tel:++7(911)736-46-13">+7 (911) 736-46-13</a>  <span>м. Технологический институт<br>Клинский проспект, дом 24</span>
+                            <div class="mapslider__item" data-aos="fade-left"><em>ежедневно 10:00 - 21:00</em>  <a href="tel:++7(911)736-46-13">+7 (911) 736-46-13</a>  <span>м. Технологический институт<br>Клинский проспект, дом 24</span>
                                 <div class="map" id="map2"></div>
                             </div>
                         </div>
@@ -122,7 +131,7 @@
                     <div class="copyright">
                         <div><b>© 2019 ООО «Пропорция»</b>  <span>Студия красоты, стрижка, окрашивание, маникюр</span>
                         </div>
-                        <a href="#dev">
+                        <a href="https://rupor.agency/" target="_blank">
                             <img src="ico/page-1.svg" alt="IMG"> <b>Рупор</b>  <span>Создание сайта</span>
                         </a>
                     </div>
@@ -130,7 +139,7 @@
             </div>
         </footer>
     </div>
-    <script src="js/main.js?v=1579315341303"></script>
+    <script src="js/main.js?v=1579374297461"></script>
 </body>
 
 </html>
