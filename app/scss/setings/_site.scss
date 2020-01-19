@@ -458,7 +458,14 @@ input {
 	overflow: hidden;
 }
 
+.fancybox-container .fancybox-bg {
+	// opacity: 0.82;
+	background-color: #ffffff;
+}
 
+.fancybox-is-open .fancybox-bg {
+	opacity: 0.82;
+}
 
 
 //AOS

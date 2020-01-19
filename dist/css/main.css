@@ -1441,6 +1441,15 @@ input.error {
     overflow: hidden;
 }
 
+.fancybox-container .fancybox-bg {
+    background-color: #ffffff;
+}
+
+.fancybox-is-open .fancybox-bg {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=82)";
+    opacity: 0.82;
+}
+
 [data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {
     -webkit-transition-duration: 50ms;
     -o-transition-duration: 50ms;
