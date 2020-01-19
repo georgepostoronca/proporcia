@@ -7752,9 +7752,11 @@ function refreshFloat(length) {
 	} else {
 		$(".loadmore").removeClass("loadmore--even")
 	}
-
+	console.log("Refresh");
+	
 	AOS.refresh();
 }
+
 refreshFloat($(".js__stylistitem.active").length);
 
 
@@ -7772,14 +7774,18 @@ $(".js__more-article").click(function() {
 		$(".js__stylistitem").eq(leng + 2).fadeIn().addClass("active");
 		$(".js__stylistitem").eq(leng + 3).fadeIn().addClass("active");
 		$(".js__stylistitem").eq(leng + 4).fadeIn().addClass("active");
-		refreshFloat(el.length);
+		refreshFloat($(".js__stylistitem.active").length);
 		rellax.refresh();
 		AOS.refresh();
-
+		
 		// console.log(leng + 1, lena);
 		if((leng + 4 >= lena)) {
 			$(this).fadeOut()
 		}
+		
+		setTimeout(function() {
+			refreshFloat($(".js__stylistitem.active").length);
+		}, 500)
 	} else {
 		$(this).fadeOut()
 	}
