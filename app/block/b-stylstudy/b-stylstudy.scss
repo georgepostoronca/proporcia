@@ -59,6 +59,10 @@
 
 		h2 {
 			@media (max-width: 680px) {
+				margin-bottom: 60px;
+			}
+			
+			@media (max-width: 580px) {
 				margin-bottom: 20px;
 			}
 		}

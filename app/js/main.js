@@ -86,6 +86,33 @@ $('.phone').each(function() {
 	});
 })
 
+$.validator.setDefaults({
+	debug: false,
+	success: 'valid',
+	rules: {
+		email: {
+			required: true,
+			email: true,
+		}
+	},
+	errorPlacement: function(error, element) {
+		$(this).removeClass('valid');
+		$(this).addClass('error');
+	},
+	success: function(label, element) {
+		$(this).removeClass('error');
+		$(this).addClass('valid');
+	},
+});
+
+$("form").each(function() {
+	$(this).validate();
+});
+
+
+// ===========================
+// ===========================
+// ===========================
 if($(".brands-slider").length) {
 	var brandslider = {
 		arrows: false,
@@ -441,7 +468,15 @@ $(".js__readrew-more").click(function() {
 });
 
 // Open Review
+var flagReadrew = false;
 $(".js__openrew").click(function() {
+	if(flagReadrew) {
+		$(this).find("span").text("Читать отзывы")
+		flagReadrew = false;
+	} else {
+		$(this).find("span").text("Скрыть отзывы")
+		flagReadrew = true;
+	}
 	$(".readrew").fadeToggle().toggleClass("active");
 });
 

@@ -264,6 +264,10 @@ input {
 		}
 	}
 
+	&.error {
+		border-color: red;
+	}
+
 	@media(max-width: 1180px) {
 		width: 240px;
 		height: 54px;

@@ -46,7 +46,13 @@
 			display: block;
 
 			@media(max-width: 580px) {
-				display: none;
+				// display: none;
+				opacity: 0.73;
+				font-size: 15px;
+				font-weight: bold;
+				line-height: 1.07;
+				margin-bottom: 24px;
+				color: #ffffff;
 			}
 		}
 

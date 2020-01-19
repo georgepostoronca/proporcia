@@ -1307,6 +1307,10 @@ input.color-white {
     color: #fff;
 }
 
+input.error {
+    border-color: red;
+}
+
 .slick-dots {
     width: 100%;
     height: 8px;
@@ -5759,7 +5763,7 @@ input.color-white {
     }
 
     .stylstudy__head h2, .stylstudy__head .bourall__title span, .bourall__title .stylstudy__head span {
-        margin-bottom: 20px;
+        margin-bottom: 60px;
     }
 
     .teacher {
@@ -5855,12 +5859,16 @@ input.color-white {
         -ms-flex-wrap: wrap;
         -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
     }
 
     .teamstyl__item {
-        width: -webkit-calc(50% - 15px);
-        width: calc(50% - 15px);
+        width: 113px;
         margin-bottom: 25px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .social {
@@ -5993,7 +6001,13 @@ input.color-white {
     }
 
     .reghaircut__form > span {
-        display: none;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=73)";
+        opacity: 0.73;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 1.07;
+        margin-bottom: 24px;
+        color: #ffffff;
     }
 
     .reghaircut__form form {
@@ -6140,6 +6154,10 @@ input.color-white {
 
     .stylstudy {
         margin-top: 70px;
+    }
+
+    .stylstudy__head h2, .stylstudy__head .bourall__title span, .bourall__title .stylstudy__head span {
+        margin-bottom: 20px;
     }
 
     .stylstudy__head img {
@@ -6473,6 +6491,20 @@ input.color-white {
 
     .header__info form {
         width: 100%;
+    }
+}
+
+@media (max-width: 370px) {
+    .teamstyl__grid {
+        -ms-flex-pack: justify;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+
+    .teamstyl__item {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
