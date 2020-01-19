@@ -3544,6 +3544,24 @@ input.error {
     float: right;
 }
 
+.loadmore.loadmore--even {
+    width: 100%;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 0px;
+    float: none;
+}
+
+.loadmore.loadmore--even .loadmore__wrap .btn {
+    width: 270px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
 .loadmore__wrap {
     width: 570px;
     margin-right: -100px;

@@ -103,10 +103,33 @@ $.validator.setDefaults({
 		$(this).removeClass('error');
 		$(this).addClass('valid');
 	},
+	submitHandler: function(form) {
+		var data = $(form).serialize();
+		
+		$.post({
+			url: "mail.php",
+			data: data,
+			success: function (res) {
+				$.fancybox.close();
+				$.fancybox.open({
+					src  : '#popup-postform',
+					type : 'inline'
+				});
+
+				setInterval(function() {
+					$.fancybox.close();
+				}, 10000)
+			}
+		});
+
+		form.reset();
+	}
 });
 
-$("form").each(function() {
-	$(this).validate();
+$("form").each(function(index, item) {
+	console.log(item);
+	
+	$(item).validate();
 });
 
 
@@ -395,7 +418,7 @@ $(".js__toggle-menu").click(function() {
 });
 
 // Load More
-function refreshFloat() {
+function refreshFloat(length) {
 	var flag = true;
 	$(".bstylist__item.active").each(function() {
 		if(flag) {
@@ -409,9 +432,16 @@ function refreshFloat() {
 			flag = true;
 		}
 	});
+
+	if(length % 2 == 1) {
+		$(".loadmore").addClass("loadmore--even")
+	} else {
+		$(".loadmore").removeClass("loadmore--even")
+	}
+
 	AOS.refresh();
 }
-refreshFloat();
+refreshFloat($(".js__stylistitem.active").length);
 
 
 $(".js__more-article").click(function() {
@@ -428,7 +458,7 @@ $(".js__more-article").click(function() {
 		$(".js__stylistitem").eq(leng + 2).fadeIn().addClass("active");
 		$(".js__stylistitem").eq(leng + 3).fadeIn().addClass("active");
 		$(".js__stylistitem").eq(leng + 4).fadeIn().addClass("active");
-		refreshFloat();
+		refreshFloat(el.length);
 		rellax.refresh();
 		AOS.refresh();
 
