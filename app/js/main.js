@@ -373,12 +373,16 @@ function refreshFloat() {
 	$(".bstylist__item.active").each(function() {
 		if(flag) {
 			$(this).css("float", "left");
+			// $(this).attr("data-aos", "fade-left");
+
 			flag = false;
 		} else {
 			$(this).css("float", "right");
+			// $(this).attr("data-aos", "fade-right");
 			flag = true;
 		}
 	});
+	AOS.refresh();
 }
 refreshFloat();
 
@@ -439,4 +443,21 @@ $(".js__readrew-more").click(function() {
 // Open Review
 $(".js__openrew").click(function() {
 	$(".readrew").fadeToggle().toggleClass("active");
+});
+
+
+// Menu Anchor
+$("[data-anchor]").each(function() {
+	$(this).on("click", function(e) {
+		e.preventDefault();
+		var href = $(this).attr("href") || $(this).data("anchor");
+		$("html, body").animate({
+			scrollTop: $(href).offset().top - 50
+		}, 1000);
+
+		$(".js__toggle-menu").toggleClass("active");
+		$(".js__menu-nav").toggleClass("active");
+		$(".js__menu").toggleClass("active");
+		$("body").toggleClass("block-scroll");
+	});
 });
