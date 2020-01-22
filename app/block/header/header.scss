@@ -58,13 +58,15 @@ $media-header-num: 992px;
 
 			&:after {
 				width: 203px;
-				height: 492px;
+				// height: 492px;
 				background: url("../img/header-img-mobile@2x.jpg") center center no-repeat;
 				background-size: cover;
 				position: absolute;
 				top: -44px;
 				right: -22px;
 				z-index: 0;
+				height: calc(100vh - 44px);
+				max-height: 550px;
 			}
 		}
 

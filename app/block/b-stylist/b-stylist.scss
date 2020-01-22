@@ -335,11 +335,13 @@
 				letter-spacing: normal;
 				text-align: center;
 				color: #ffffff;
-				margin-bottom: 21px;
+				// margin-bottom: 21px;
 				padding: 0 10%;
+				margin-bottom: 70px;
 
 				@media(max-width: 992px) {
 					padding: 0;
+					margin-bottom: 30px;
 				}
 
 				@media(max-width: 767px) {
@@ -349,7 +351,8 @@
 				@media(max-width: 680px) {
 					font-size: 14px;
 					line-height: 1.43;
-					margin-bottom: 25px;
+					// margin-bottom: 25px;
+					margin-bottom: 64px;
 				}
 			}
 
