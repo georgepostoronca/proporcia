@@ -220,6 +220,7 @@
 	justify-content: space-between;
 	padding-top: 59px;
 	padding-bottom: 40px;
+	position: relative;
 
 	@media(max-width: 580px) {
 		display: block;
@@ -299,6 +300,12 @@
 	img {
 		@media(max-width: 767px) {
 			height: 50px;
+		}
+	}
+
+	.totop {
+		span {
+			color: #1b1f26;
 		}
 	}
 }

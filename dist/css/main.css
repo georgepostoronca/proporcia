@@ -2792,6 +2792,13 @@ input.error {
     width: 1.82759em;
 }
 
+.svg-totop {
+    font-size: 45.616px;
+    font-size: 45.616px;
+    font-size: 2.851rem;
+    width: 0.94739em;
+}
+
 .svg-vk {
     font-size: 65.6px;
     font-size: 65.6px;
@@ -4051,6 +4058,54 @@ input.error {
     height: 100%;
 }
 
+.totop {
+    width: 76px;
+    height: 76px;
+    background-color: #f1f1f2;
+    background-color: rgba(241, 241, 242, .53);
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    right: -108px;
+    bottom: 182px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    z-index: 999;
+}
+
+.totop span {
+    text-align: center;
+    color: #1b1f26;
+}
+
+.totop svg {
+    fill: #1b1f26;
+}
+
+.totop.active {
+    visibility: visible;
+    pointer-events: auto;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+}
+
 .footer {
     background-color: #1b1f26;
     color: #fff;
@@ -4198,6 +4253,7 @@ input.error {
     justify-content: space-between;
     padding-top: 59px;
     padding-bottom: 40px;
+    position: relative;
 }
 
 .copyright b {
@@ -4230,6 +4286,10 @@ input.error {
 
 .copyright a b, .copyright a span {
     display: none;
+}
+
+.copyright .totop span {
+    color: #1b1f26;
 }
 
 .header__wrap {
@@ -4600,6 +4660,10 @@ input.error {
     .container-max {
         width: 100%;
     }
+
+    .totop {
+        right: -90px;
+    }
 }
 
 @media (max-width: 1439px) {
@@ -4613,6 +4677,10 @@ input.error {
 }
 
 @media (max-width: 1380px) {
+    .totop {
+        display: none;
+    }
+
     .header__wrap {
         padding-left: 50px;
     }

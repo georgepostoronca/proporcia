@@ -1,0 +1,41 @@
+.totop {
+    width: 76px;
+    height: 76px;
+    background-color: rgba(#f1f1f2, 0.53);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    right: -108px;
+    bottom: 182px;
+    // visibility: hidden;
+    // opacity: 0;
+    // pointer-events: none;
+    transition: .2s;
+    z-index: 999;
+
+    @media(max-width: 1460px) {
+        right: -90px;
+    }
+
+    @media(max-width: 1380px) {
+        display: none;
+    }
+
+    span {
+        text-align: center;
+        color: #1b1f26;
+    }
+
+    svg {
+        fill: #1b1f26;
+    }
+
+    &.active {
+        visibility: visible;
+        pointer-events: auto;
+        opacity: 1;
+    }
+}

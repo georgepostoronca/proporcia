@@ -7341,6 +7341,7 @@ w||(window.removeEventListener("resize",B),w=!0);J(p);p=null};B();b.refresh=B;re
 
 
 
+
 // Zoom
 // function parallax() {
 // 	var $slider = document.querySelector(".zoom");
@@ -7904,4 +7905,18 @@ deeplink.setup({
 $(".js__isoandroid").click(function(event) {
 	event.preventDefault();
 	deeplink.open("myapp://object/xyz");
+});
+
+// ToTop
+// $(window).scroll(function () {
+// 	if($(window).scrollTop() >= $(window).height() / 1.5) {
+// 		$(".totop").addClass("active")
+// 	} else {
+// 		$(".totop").removeClass("active")
+// 	}
+// });
+
+$(".js__totop").click(function() {
+	var body = $("html, body");
+	body.stop().animate({scrollTop:0}, 800, 'swing');
 });
