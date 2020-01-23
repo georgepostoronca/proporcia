@@ -114,6 +114,7 @@
 
 	&-scroll {
 		-webkit-overflow-scrolling: touch;
+		overflow: auto;
 
 		@media(max-width: 767px) {
 			order: 3;
@@ -126,6 +127,7 @@
 			padding-left: 22px;
 		}
 	}
+
 
 	@media(max-width: 767px) {
 		//order: 3;

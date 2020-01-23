@@ -100,9 +100,10 @@
 	}
 
 	&-scroll {
-		width: calc(100% + 22px);
+		width: calc(100% + 44px);
 		padding-left: 22px;
 		margin-left: -22px;
+		padding-right: 22px;
 		@extend .safari-scroll;
 		@media(max-width: 680px) {
 			overflow: auto;
@@ -114,7 +115,8 @@
 	}
 
 	@media(max-width: 680px) {
-		width: 700px;
+		width: 744px;
+		padding-right: 22px;
 	}
 
 	@media(max-width: 580px) {

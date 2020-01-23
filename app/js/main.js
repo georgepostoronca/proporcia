@@ -583,13 +583,19 @@ $(".js__isoandroid").click(function(event) {
 });
 
 // ToTop
-// $(window).scroll(function () {
-// 	if($(window).scrollTop() >= $(window).height() / 1.5) {
-// 		$(".totop").addClass("active")
-// 	} else {
-// 		$(".totop").removeClass("active")
-// 	}
-// });
+$(window).scroll(function () {
+	if($(window).scrollTop() >= $(window).height() / 1.5) {
+		$(".totop").addClass("active")
+	} else {
+		$(".totop").removeClass("active")
+	}
+
+	if($(window).scrollTop() + $(window).height() == $(document).height()) {
+		$(".totop").addClass("end")
+	} else {
+		$(".totop").removeClass("end")
+	}
+});
 
 $(".js__totop").click(function() {
 	var body = $("html, body");

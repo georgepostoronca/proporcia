@@ -1157,10 +1157,6 @@ html, body {
     background-color: #f1f1f2;
 }
 
-html::-webkit-scrollbar, body::-webkit-scrollbar {
-    display: none;
-}
-
 #wrapper {
     overflow: hidden;
 }
@@ -3820,7 +3816,7 @@ input.error {
 }
 
 .teacher-scroll {
-    -webkit-overflow-scrolling: touch;
+    overflow: auto;
 }
 
 .teacher__item {
@@ -4065,7 +4061,6 @@ input.error {
     width: 76px;
     height: 76px;
     background-color: #f1f1f2;
-    background-color: rgba(241, 241, 242, .53);
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
@@ -4084,13 +4079,25 @@ input.error {
     -webkit-justify-content: center;
     justify-content: center;
     cursor: pointer;
-    position: absolute;
-    right: -108px;
-    bottom: 182px;
-    -webkit-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s;
+    position: fixed;
+    left: 22px;
+    bottom: 30px;
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    opacity: 0.3;
+    pointer-events: none;
+    -webkit-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    transform: translateX(-200px);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
     z-index: 999;
+}
+
+.totop:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    opacity: .8;
 }
 
 .totop span {
@@ -4105,8 +4112,9 @@ input.error {
 .totop.active {
     visibility: visible;
     pointer-events: auto;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    opacity: 1;
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
 }
 
 .footer {
@@ -4187,10 +4195,11 @@ input.error {
 }
 
 .mapslider-scroll {
-    width: -webkit-calc(100% + 22px);
-    width: calc(100% + 22px);
+    width: -webkit-calc(100% + 44px);
+    width: calc(100% + 44px);
     padding-left: 22px;
     margin-left: -22px;
+    padding-right: 22px;
 }
 
 .mapslider__item {
@@ -4680,10 +4689,6 @@ input.error {
 }
 
 @media (max-width: 1380px) {
-    .totop {
-        display: none;
-    }
-
     .header__wrap {
         padding-left: 50px;
     }
@@ -4869,6 +4874,29 @@ input.error {
 
     .menu__regonline {
         display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    ::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb:horizontal {
+        height: 0px;
+    }
+
+    .totop.active {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        opacity: .5;
     }
 }
 
@@ -5395,6 +5423,11 @@ input.error {
         -webkit-box-ordinal-group: 13;
         -webkit-order: 12;
         order: 12;
+    }
+
+    .totop.active {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+        opacity: .8;
     }
 
     .menu__wrap {
@@ -5992,7 +6025,8 @@ input.error {
     }
 
     .mapslider {
-        width: 700px;
+        width: 744px;
+        padding-right: 22px;
     }
 }
 
@@ -6346,6 +6380,16 @@ input.error {
         display: none;
     }
 
+    .totop {
+        padding: 5px;
+        width: 55px;
+        height: 55px;
+        left: 22px;
+        bottom: 15px;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+        opacity: .8;
+    }
+
     .footer {
         padding-top: 58px;
     }
@@ -6604,6 +6648,12 @@ input.error {
     .teamstyl__item {
         margin-left: 0;
         margin-right: 0;
+    }
+}
+
+@media (min-width: 581px) and (max-width: 1400px) {
+    .totop.end {
+        bottom: 140px;
     }
 }
 
