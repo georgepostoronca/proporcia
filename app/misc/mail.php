@@ -3,7 +3,7 @@
 
 if($_POST['form-title']) {
 
-    $subject = $_POST['form-title']; 
+    $subject = "заявка с сайта"; 
 
     $result = "";   
 
