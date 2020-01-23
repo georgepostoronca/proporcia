@@ -1157,6 +1157,10 @@ html, body {
     background-color: #f1f1f2;
 }
 
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+}
+
 #wrapper {
     overflow: hidden;
 }
@@ -3009,6 +3013,7 @@ input.error {
     -webkit-flex: 1;
     flex: 1;
     padding-top: 45px;
+    overflow: hidden;
 }
 
 .popup-postform__content img {
@@ -5848,6 +5853,10 @@ input.error {
         margin-top: 0;
     }
 
+    .stylistwork {
+        margin-top: 80px;
+    }
+
     .stylstudy__wrap {
         -ms-flex-direction: column;
         -webkit-box-orient: vertical;
@@ -5875,6 +5884,7 @@ input.error {
     .teacher {
         position: relative;
         margin-top: 111px;
+        margin-bottom: 0px;
     }
 
     .teacher:after {
@@ -6222,7 +6232,7 @@ input.error {
     }
 
     .stylistwork {
-        margin-top: 0;
+        margin-top: 60px;
     }
 
     .stylistwork__item i {
