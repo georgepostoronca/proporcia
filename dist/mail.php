@@ -2,9 +2,8 @@
 <?php 
 
 if($_POST['form-title']) {
-    $to  = "testmail@gmail.com";
 
-    $subject = $_POST['form-title']; 
+    $subject = "заявка с сайта"; 
 
     $result = "";   
 
@@ -17,13 +16,14 @@ if($_POST['form-title']) {
             $result .= "<tr><td>" . $value . "<td><tr>";
         }
     }
-    $message = "<table border='1' style='border-collapse: collapse;'><tbody>" . $result . "</tbody>" . "</table>";
+    $message = "<table border='1' style='width: 100%; border-collapse: collapse;'><tbody>" . $result . "</tbody>" . "</table>";
 
     $headers  = "Content-type: text/html; charset=UTF-8 \r\n"; 
     $headers .= "From: От кого письмо <from@example.com>\r\n"; 
     $headers .= "Reply-To: reply-to@example.com\r\n"; 
 
-    mail($to, $subject, $message, $headers); 
+    mail("prophair@gmail.com", $subject, $message, $headers); 
+    mail("forms@rupor.agency", $subject, $message, $headers); 
     echo $_POST['form-title'];
 }
 
