@@ -1341,10 +1341,14 @@ input.error {
     background-color: #33558b;
 }
 
+.slick-dots li.slick-active button {
+    background-color: #33558b;
+}
+
 .slick-dots li button {
     width: 100%;
     height: 100%;
-    background-color: inherit;
+    background-color: #C6C7CA;
     border: 0;
     font-size: 0;
     position: absolute;
