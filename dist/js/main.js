@@ -7580,7 +7580,7 @@ try {
 		var repsliderSetings = {
 			arrows: false,
 			dots: true,
-			infinite: true,
+			infinite: false,
 			slidesToShow: 4,
 			slidesToScroll: 1,
 			swipe: true,
