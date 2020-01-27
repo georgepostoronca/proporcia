@@ -1328,8 +1328,7 @@ input.error {
     -webkit-flex: 1;
     flex: 1;
     height: 8px;
-/*     background-color: transparent; */
-	background-color: #C6C7CA;
+    background-color: #C6C7CA;
     cursor: pointer;
     position: relative;
     -webkit-transition: .2s;
@@ -5382,17 +5381,17 @@ input.error {
     }
 
     #wrapper .stylistwork {
-        -ms-flex-order: 10;
-        -webkit-box-ordinal-group: 11;
-        -webkit-order: 10;
-        order: 10;
+        -ms-flex-order: 6;
+        -webkit-box-ordinal-group: 7;
+        -webkit-order: 6;
+        order: 6;
     }
 
     #wrapper .reghaircut {
-        -ms-flex-order: 11;
-        -webkit-box-ordinal-group: 12;
-        -webkit-order: 11;
-        order: 11;
+        -ms-flex-order: 7;
+        -webkit-box-ordinal-group: 8;
+        -webkit-order: 7;
+        order: 7;
     }
 
     #wrapper .teamstyl {
@@ -5410,10 +5409,10 @@ input.error {
     }
 
     #wrapper .registration {
-        -ms-flex-order: 5;
-        -webkit-box-ordinal-group: 6;
-        -webkit-order: 5;
-        order: 5;
+        -ms-flex-order: 10;
+        -webkit-box-ordinal-group: 11;
+        -webkit-order: 10;
+        order: 10;
     }
 
     #wrapper .reputation {
@@ -5428,6 +5427,14 @@ input.error {
         -webkit-box-ordinal-group: 13;
         -webkit-order: 12;
         order: 12;
+    }
+
+    .registration {
+        margin-top: -17px;
+    }
+
+    .stylistwork {
+        margin-top: 20px;
     }
 
     .totop.active {
@@ -5892,7 +5899,7 @@ input.error {
     }
 
     .stylistwork {
-        margin-top: 80px;
+        margin-top: 0;
     }
 
     .stylstudy__wrap {
@@ -6268,10 +6275,6 @@ input.error {
 
     .bstylist__item--discount {
         height: 320px;
-    }
-
-    .stylistwork {
-        margin-top: 60px;
     }
 
     .stylistwork__item i {
