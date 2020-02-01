@@ -3516,28 +3516,29 @@ input.error {
     text-align: center;
     padding-top: 44px;
     padding-bottom: 84px;
+    padding-top: 107px;
 }
 
 .bstylist__item--discount b {
-    font-size: 184px;
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: normal;
+    font-size: 54px;
+    font-weight: 300;
+    line-height: 0.87;
     text-align: center;
     color: #686673;
     display: inline-block;
     margin-bottom: 13px;
+    margin-bottom: 32px;
 }
 
 .bstylist__item--discount p {
     font-size: 22px;
     font-weight: 300;
     line-height: 1.27;
-    letter-spacing: normal;
     text-align: center;
     color: #ffffff;
     padding: 0 10%;
     margin-bottom: 70px;
+    margin-bottom: 102px;
 }
 
 .bstylist__item--discount em {
@@ -4249,9 +4250,6 @@ input.error {
 .mapslider__item iframe, .mapslider__item .map {
     width: 100%;
     height: 464px;
-    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="-38.37 35.76 3.61 0 0 10.63 -13.24 3.61 0 0 10.63 35.76 -45.38999999999999 0 0 0 0 0 1 0" /></filter></svg>#filter');
-    -webkit-filter: grayscale(50);
-    filter: grayscale(50);
 }
 
 .copyright {
@@ -4327,6 +4325,7 @@ input.error {
 
 .header__info h1 {
     margin-bottom: 71px;
+    text-shadow: rgba(255, 255, 255, .4) 0px 0px;
 }
 
 .header__info form {
@@ -4445,7 +4444,7 @@ input.error {
 .header__regonline a {
     font-size: 16px;
     font-weight: bold;
-    line-height: 2.06;
+    line-height: 1.25;
     color: #26252c;
     text-decoration: underline;
 }
@@ -5075,10 +5074,11 @@ input.error {
     }
 
     .bstylist__item--discount b {
-        font-size: 12vw;
+        font-size: 5vw;
     }
 
     .bstylist__item--discount p {
+        font-size: 18px;
         padding: 0;
         margin-bottom: 30px;
     }
@@ -5872,10 +5872,10 @@ input.error {
 
     .bstylist__item--discount {
         padding-top: 23px;
+        padding-bottom: 30px;
     }
 
     .bstylist__item--discount b {
-        font-size: 64px;
         margin-bottom: 16px;
     }
 
@@ -5891,6 +5891,11 @@ input.error {
         line-height: 2;
         margin-bottom: 15px;
         display: inline-block;
+    }
+
+    .bstylist__item--discount .btn {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .loadmore {
@@ -6512,7 +6517,7 @@ input.error {
 
     .header__info:after {
         width: 203px;
-        background: url("../img/header-img-mobile@2x.jpg") center center no-repeat;
+        background: url("../img/stylist-img-new.jpg") center center no-repeat;
         -webkit-background-size: cover;
         background-size: cover;
         position: absolute;
