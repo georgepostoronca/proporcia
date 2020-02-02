@@ -1454,6 +1454,14 @@ input.error {
     opacity: 0.82;
 }
 
+.slick-loading {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
 [data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {
     -webkit-transition-duration: 50ms;
     -o-transition-duration: 50ms;

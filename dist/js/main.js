@@ -7530,6 +7530,7 @@ try {
 try {
 	if ($(".studyslide").length) {
 		$(".studyslide").slick({
+			lazyLoad: 'ondemand',
 			arrows: false,
 			dots: true,
 			infinite: true,
@@ -7578,6 +7579,7 @@ try {
 try {
 	if ($(".repslider").length) {
 		var repsliderSetings = {
+			lazyLoad: 'ondemand',
 			arrows: false,
 			dots: true,
 			infinite: false,
