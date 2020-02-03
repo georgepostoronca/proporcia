@@ -5884,7 +5884,8 @@ input.error {
     }
 
     .bstylist__item--discount b {
-        margin-bottom: 16px;
+        margin-bottom: 25px;
+        font-size: 32px;
     }
 
     .bstylist__item--discount p {

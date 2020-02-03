@@ -7466,7 +7466,7 @@ try {
 		var brandslider = {
 			arrows: false,
 			dots: true,
-			infinite: true,
+			// infinite: true,
 			slidesToShow: 4,
 			slidesToScroll: 1,
 			swipe: true,
@@ -7530,7 +7530,7 @@ try {
 try {
 	if ($(".studyslide").length) {
 		$(".studyslide").slick({
-			lazyLoad: 'ondemand',
+			// lazyLoad: 'ondemand',
 			arrows: false,
 			dots: true,
 			infinite: true,
